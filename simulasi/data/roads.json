@@ -1,0 +1,514 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-19T07:50:58Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 125178979,
+  "center": {
+    "lat": -6.8671210,
+    "lon": 107.5914804
+  },
+  "tags": {
+    "highway": "unclassified",
+    "name": "Jalan Gegerkalong Tengah",
+    "oneway:motorcar": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 167539549,
+  "center": {
+    "lat": -6.8502336,
+    "lon": 107.5976325
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "destination:backward": "Lembang",
+    "destination:forward": "Bandung",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "no",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K"
+  }
+},
+{
+  "type": "way",
+  "id": 223676585,
+  "center": {
+    "lat": -6.8758165,
+    "lon": 107.5966872
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 250079404,
+  "center": {
+    "lat": -6.8625878,
+    "lon": 107.5866265
+  },
+  "tags": {
+    "alt_name": "Jalan Gegerkalong Hurip",
+    "avgspeed": "20",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lanes": "1",
+    "name": "Jalan Gegerkalong Girang",
+    "oneway": "no",
+    "source": "bing;GPS",
+    "surface": "concrete",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 318054785,
+  "center": {
+    "lat": -6.8619519,
+    "lon": 107.5954517
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "no",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 331191951,
+  "center": {
+    "lat": -6.8636627,
+    "lon": 107.5897896
+  },
+  "tags": {
+    "alt_name": "Jalan Gegerkalong Hurip",
+    "avgspeed": "20",
+    "highway": "tertiary",
+    "name": "Jalan Gegerkalong Girang",
+    "source": "bing;GPS"
+  }
+},
+{
+  "type": "way",
+  "id": 520142437,
+  "center": {
+    "lat": -6.8660515,
+    "lon": 107.5914153
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Gegerkalong Tengah 9"
+  }
+},
+{
+  "type": "way",
+  "id": 708711416,
+  "center": {
+    "lat": -6.8677669,
+    "lon": 107.5938010
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "avgspeed": "40",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "no",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 860967810,
+  "center": {
+    "lat": -6.8645456,
+    "lon": 107.5928046
+  },
+  "tags": {
+    "alt_name": "Jalan Gegerkalong Hurip",
+    "avgspeed": "20",
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "Jalan Gegerkalong Girang",
+    "smoothness": "good",
+    "source": "bing;GPS",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 955513459,
+  "center": {
+    "lat": -6.8586243,
+    "lon": 107.5949816
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 955513460,
+  "center": {
+    "lat": -6.8588089,
+    "lon": 107.5949536
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1030698154,
+  "center": {
+    "lat": -6.8591330,
+    "lon": 107.5948801
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1030698156,
+  "center": {
+    "lat": -6.8634690,
+    "lon": 107.5946926
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "no",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1030698160,
+  "center": {
+    "lat": -6.8643244,
+    "lon": 107.5942525
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1223297639,
+  "center": {
+    "lat": -6.8724242,
+    "lon": 107.5947223
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "no",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1228093028,
+  "center": {
+    "lat": -6.8706040,
+    "lon": 107.5935714
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "no",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K"
+  }
+},
+{
+  "type": "way",
+  "id": 1258718409,
+  "center": {
+    "lat": -6.8599082,
+    "lon": 107.5947623
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "avgspeed": "40",
+    "highway": "primary",
+    "lanes": "2",
+    "loc_name": "Jalan Dr. Setiabudhi",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "short_name": "Jalan Dr. Setiabudhi",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1259682114,
+  "center": {
+    "lat": -6.8588772,
+    "lon": 107.5949330
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1429001950,
+  "center": {
+    "lat": -6.8636717,
+    "lon": 107.5945139
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "no",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1429001951,
+  "center": {
+    "lat": -6.8649546,
+    "lon": 107.5940920
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "avgspeed": "40",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1429001952,
+  "center": {
+    "lat": -6.8644780,
+    "lon": 107.5942448
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "sidewalk:left": "separate",
+    "sidewalk:right": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1431911656,
+  "center": {
+    "lat": -6.8622845,
+    "lon": 107.5850981
+  },
+  "tags": {
+    "alt_name": "Jalan Gegerkalong Hurip",
+    "avgspeed": "20",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lanes": "1",
+    "name": "Jalan Gegerkalong Girang",
+    "oneway": "no",
+    "source": "bing;GPS",
+    "surface": "asphalt",
+    "width": "2.5"
+  }
+},
+{
+  "type": "way",
+  "id": 1431911657,
+  "center": {
+    "lat": -6.8623918,
+    "lon": 107.5849156
+  },
+  "tags": {
+    "alt_name": "Jalan Gegerkalong Hurip",
+    "avgspeed": "20",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lanes": "1",
+    "name": "Jalan Gegerkalong Girang",
+    "oneway": "no",
+    "source": "bing;GPS",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 1570155634,
+  "center": {
+    "lat": -6.8599119,
+    "lon": 107.5947892
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "avgspeed": "40",
+    "highway": "primary",
+    "lanes": "2",
+    "loc_name": "Jalan Dr. Setiabudhi",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "short_name": "Jalan Dr. Setiabudhi",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1570156142,
+  "center": {
+    "lat": -6.8591031,
+    "lon": 107.5949259
+  },
+  "tags": {
+    "alt_name": "Jalan Dokter Setiabudi",
+    "avgspeed": "40",
+    "highway": "primary",
+    "lanes": "2",
+    "loc_name": "Jalan Dr. Setiabudhi",
+    "name": "Jalan Dr. Setiabudi",
+    "name:etymology:wikidata": "Q2253449",
+    "name:etymology:wikipedia": "id:Ernest Douwes Dekker",
+    "oneway": "yes",
+    "ref": "249",
+    "reg_ref": "22-00-249-13K",
+    "short_name": "Jalan Dr. Setiabudhi",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+}
+
+  ]
+}

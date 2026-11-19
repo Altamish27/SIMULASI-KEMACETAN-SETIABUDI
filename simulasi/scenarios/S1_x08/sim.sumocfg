@@ -1,0 +1,18 @@
+<configuration>
+  <input>
+    <net-file value="../../net/S1/net.net.xml"/>
+    <route-files value="routes.rou.xml"/>
+    <additional-files value="stops.add.xml"/>
+  </input>
+  <time><begin value="0"/><end value="4200"/><step-length value="0.5"/></time>
+  <processing>
+    <lateral-resolution value="0.8"/>
+    <time-to-teleport value="240"/>
+    <time-to-impatience value="45"/>
+    <collision.action value="warn"/>
+    <collision.check-junctions value="false"/>
+    <ignore-route-errors value="true"/>
+    <default.speeddev value="0.1"/>
+  </processing>
+  <report><no-step-log value="true"/><verbose value="false"/></report>
+</configuration>

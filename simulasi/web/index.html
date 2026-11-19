@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulasi Puteran Setiabudi</title>
+<style>
+  :root {
+    --bg: #0f1216; --panel: rgba(18, 22, 28, 0.86); --line: rgba(255,255,255,0.10);
+    --text: #eef0f2; --text2: #a9b0b8; --accent: #3a8ee6; --good: #2fb67c; --warn: #eda100; --bad: #e34948;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font: 13px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; overflow: hidden; }
+  #view { position: fixed; inset: 0; }
+  .panel { position: fixed; background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    backdrop-filter: blur(6px); padding: 12px 14px; }
+  #side { top: 12px; left: 12px; width: 320px; max-height: calc(100% - 24px); overflow-y: auto; }
+  h1 { font-size: 15px; margin: 0 0 2px; }
+  .sub { color: var(--text2); font-size: 12px; margin-bottom: 10px; }
+  h2 { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--text2); margin: 14px 0 6px; }
+  select, button, input[type=range] { width: 100%; }
+  select, button { background: #232a33; color: var(--text); border: 1px solid var(--line); border-radius: 7px;
+    padding: 7px 9px; font: inherit; cursor: pointer; }
+  button:hover, select:hover { border-color: #4a5563; }
+  button.primary { background: var(--accent); border-color: var(--accent); font-weight: 600; }
+  button.danger { background: #5a2326; border-color: #7a2c30; }
+  .row { display: flex; gap: 6px; margin: 6px 0; }
+  .row > * { flex: 1; }
+  .cams { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  .cams button { padding: 5px 6px; font-size: 12px; }
+  .stat { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dashed var(--line); }
+  .stat b { font-variant-numeric: tabular-nums; }
+  .bar { height: 6px; background: #2a313a; border-radius: 3px; overflow: hidden; margin: 2px 0 6px; }
+  .bar > i { display: block; height: 100%; width: 0; background: var(--warn); transition: width .4s; }
+  #desc { color: var(--text2); font-size: 12px; margin-top: 6px; }
+  label { color: var(--text2); font-size: 12px; display: block; margin-top: 6px; }
+  #hud { bottom: 14px; left: 50%; transform: translateX(-50%); display: none; text-align: center; min-width: 360px; }
+  #hud .speed { font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  #hud .speed small { font-size: 13px; color: var(--text2); font-weight: 400; }
+  #hud .keys { color: var(--text2); font-size: 12px; }
+  #alert { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); padding: 8px 16px; border-radius: 8px;
+    background: var(--bad); font-weight: 600; display: none; }
+  #legend { right: 12px; top: 12px; width: 230px; font-size: 12px; }
+  #legend .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -2px; }
+  #conn { position: fixed; right: 12px; bottom: 12px; font-size: 12px; color: var(--text2); }
+  #loading { position: fixed; inset: 0; display: grid; place-items: center; background: var(--bg); z-index: 10; font-size: 15px; }
+  a { color: #8cc2ff; }
+  @media (max-width: 760px) { #side { width: calc(100% - 24px); max-height: 46%; } #legend { display: none; } #hud { min-width: 0; width: calc(100% - 24px); } }
+</style>
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.js", "three/addons/": "./vendor/addons/" } }
+</script>
+</head>
+<body>
+<div id="view"></div>
+<div id="loading">Memuat peta 3D…</div>
+
+<div id="side" class="panel">
+  <h1>Simulasi Puteran Jl. Dr. Setiabudi × Gerlong</h1>
+  <div class="sub">Bandung · SUMO (mikro-simulasi) + Three.js · koordinat & geometri dari OpenStreetMap</div>
+
+  <h2>Skenario</h2>
+  <select id="scen"></select>
+  <div id="desc"></div>
+  <label>Kepadatan lalu lintas: <b id="scaleVal">100%</b> (100% = asumsi jam puncak)</label>
+  <input id="scale" type="range" min="0.4" max="1.3" step="0.05" value="1">
+  <div class="row">
+    <button id="btnStart" class="primary">▶ Mulai / Ulang</button>
+    <button id="btnPause">⏸ Jeda</button>
+  </div>
+  <label>Kecepatan simulasi</label>
+  <select id="speed">
+    <option value="1">1× (waktu nyata)</option><option value="2">2×</option>
+    <option value="5" selected>5×</option><option value="10">10×</option><option value="20">20× (maks)</option>
+  </select>
+
+  <h2>Kamera</h2>
+  <div class="cams" id="cams"></div>
+
+  <h2>Kondisi saat ini</h2>
+  <div class="stat"><span>Waktu simulasi</span><b id="sTime">–</b></div>
+  <div class="stat"><span>Kendaraan di jalan</span><b id="sN">–</b></div>
+  <div class="stat"><span>Tertahan di luar area</span><b id="sPend">–</b></div>
+  <div class="stat"><span>Kecepatan rata-rata</span><b id="sV">–</b></div>
+  <div style="margin-top:8px">Panjang tersendat</div>
+  <div class="stat"><span>Arah turun (dari Lembang)</span><b id="qT">–</b></div><div class="bar"><i id="bT"></i></div>
+  <div class="stat"><span>Arah naik (dari kota)</span><b id="qN">–</b></div><div class="bar"><i id="bN"></i></div>
+  <div class="stat"><span>Jl. Gegerkalong Girang</span><b id="qG">–</b></div><div class="bar"><i id="bG"></i></div>
+
+  <h2>Mode kemudi</h2>
+  <div class="row">
+    <select id="egoType">
+      <option value="motor">Motor</option><option value="mobil" selected>Mobil</option>
+      <option value="angkot">Angkot</option><option value="truk">Truk</option><option value="bus">Bus</option>
+    </select>
+    <select id="egoAt">
+      <option value="lembang">Dari Lembang (atas)</option><option value="bawah">Dari bawah (kota)</option>
+      <option value="gerlong">Dari Gerlong</option>
+    </select>
+  </div>
+  <div class="row">
+    <button id="btnDrive" class="primary">🚗 Mulai kemudi</button>
+    <button id="btnStopDrive" class="danger">Selesai</button>
+  </div>
+  <div class="sub" style="margin-top:4px">W/↑ gas · S/↓ rem/mundur · A D/← → setir · Spasi rem tangan · C ganti kamera.
+    Kendaraan lain bereaksi terhadap Anda (di dalam SUMO).</div>
+
+  <h2>Hasil analisis</h2>
+  <a href="hasil.html" target="_blank">Buka grafik & tabel hasil 4 skenario →</a>
+</div>
+
+<div id="legend" class="panel">
+  <b>Legenda</b>
+  <div><span class="sw" style="background:#f07a2a"></span>Motor</div>
+  <div><span class="sw" style="background:#cfd3d8"></span>Mobil (warna acak)</div>
+  <div><span class="sw" style="background:#1f9a4f"></span>Angkot hijau</div>
+  <div><span class="sw" style="background:#e8c21c"></span>Dump truck</div>
+  <div><span class="sw" style="background:#2f7d43"></span>Bus</div>
+  <div><span class="sw" style="background:#e3263f"></span>Kendaraan Anda</div>
+  <div style="margin-top:6px;color:var(--text2)">Pagar stainless = median baru · Rambu biru = boleh putar balik ·
+  Kotak merah redup di kendaraan = lampu rem.</div>
+</div>
+
+<div id="hud" class="panel">
+  <div class="speed"><span id="hudV">0</span> <small>km/jam</small></div>
+  <div id="hudInfo" class="keys">–</div>
+</div>
+<div id="alert"></div>
+<div id="conn">menghubungkan ke simulator…</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

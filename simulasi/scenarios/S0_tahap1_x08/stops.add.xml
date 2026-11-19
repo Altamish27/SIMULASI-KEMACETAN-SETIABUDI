@@ -1,0 +1,5 @@
+<additional>
+  <busStop id="halte_GG" lane="NB_S_A_0" startPos="351.4" endPos="369.4" name="Halte Gegerkalong Girang" lines="angkot"/>
+  <busStop id="ngetem_NB" lane="NB_G_B_0" startPos="0.0" endPos="13.5" name="Ngetem sudut Gerlong (J&amp;T)" lines="angkot"/>
+  <busStop id="ngetem_GER" lane="GER_in_0" startPos="399.5" endPos="415.5" name="Ngetem mulut Gerlong" lines="angkot"/>
+</additional>

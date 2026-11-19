@@ -1,0 +1,21 @@
+Warning! pyarrow is installed with version 25.0.0 which might be incompatible with libsumo which is compiled against libarrow2300.
+ Try to uninstall pyarrow or install a matching pyarrow version, if you encounter problems.
+Simulasi 3D siap: buka http://127.0.0.1:8000  (Ctrl+C untuk berhenti)
+connection handler failed
+TimeoutError: timed out while closing connection
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\miniconda3\Lib\site-packages\websockets\asyncio\server.py", line 376, in conn_handler
+    await self.handler(connection)
+  File "C:\DataTamish\File Abi\Semester 7\MSTR\simulasi\bridge\server.py", line 270, in handler
+    async for raw in ws:
+    ...<3 lines>...
+            pass
+  File "C:\Users\lenovo\miniconda3\Lib\site-packages\websockets\asyncio\connection.py", line 242, in __aiter__
+    yield await self.recv()
+          ^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\miniconda3\Lib\site-packages\websockets\asyncio\connection.py", line 322, in recv
+    raise self.protocol.close_exc from self.recv_exc
+websockets.exceptions.ConnectionClosedError: sent 1011 (internal error) keepalive ping timeout; no close frame received

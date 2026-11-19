@@ -1,0 +1,105 @@
+{
+ "scenario": "S0_tahap1",
+ "od": {
+  "KAH_south": {
+   "label": "KAH_south",
+   "n": 42,
+   "waktu_tempuh_rata_s": 79.1,
+   "waktu_tempuh_p85_s": 101.5,
+   "tundaan_rata_s": 17.5
+  },
+  "NB_ger": {
+   "label": "Dari bawah → Gerlong",
+   "n": 314,
+   "waktu_tempuh_rata_s": 228.7,
+   "waktu_tempuh_p85_s": 299.3,
+   "tundaan_rata_s": 141.9
+  },
+  "NB_thru": {
+   "label": "Dari bawah → lurus ke atas",
+   "n": 3161,
+   "waktu_tempuh_rata_s": 260.4,
+   "waktu_tempuh_p85_s": 348.7,
+   "tundaan_rata_s": 165.9
+  },
+  "GER_north": {
+   "label": "Gerlong → atas",
+   "n": 411,
+   "waktu_tempuh_rata_s": 284.8,
+   "waktu_tempuh_p85_s": 381.3,
+   "tundaan_rata_s": 182.1
+  },
+  "NB_kah": {
+   "label": "NB_kah",
+   "n": 36,
+   "waktu_tempuh_rata_s": 192.6,
+   "waktu_tempuh_p85_s": 257.7,
+   "tundaan_rata_s": 131.1
+  },
+  "GER_south": {
+   "label": "Gerlong → bawah",
+   "n": 281,
+   "waktu_tempuh_rata_s": 310.6,
+   "waktu_tempuh_p85_s": 410.9,
+   "tundaan_rata_s": 205.7
+  },
+  "NB_uturn": {
+   "label": "Dari bawah → putar balik",
+   "n": 131,
+   "waktu_tempuh_rata_s": 256.5,
+   "waktu_tempuh_p85_s": 321.9,
+   "tundaan_rata_s": 165.3
+  },
+  "SB_thru": {
+   "label": "Dari atas → lurus ke bawah",
+   "n": 1999,
+   "waktu_tempuh_rata_s": 997.5,
+   "waktu_tempuh_p85_s": 1518.8,
+   "tundaan_rata_s": 908.5
+  },
+  "SB_kah": {
+   "label": "SB_kah",
+   "n": 51,
+   "waktu_tempuh_rata_s": 496.8,
+   "waktu_tempuh_p85_s": 619.2,
+   "tundaan_rata_s": 414.1
+  },
+  "KAH_north": {
+   "label": "KAH_north",
+   "n": 24,
+   "waktu_tempuh_rata_s": 130.3,
+   "waktu_tempuh_p85_s": 152.5,
+   "tundaan_rata_s": 43.8
+  },
+  "SB_ger": {
+   "label": "Dari atas (Lembang) → Gerlong",
+   "n": 188,
+   "waktu_tempuh_rata_s": 1363.6,
+   "waktu_tempuh_p85_s": 1839.5,
+   "tundaan_rata_s": 1275.5
+  },
+  "SB_uturn": {
+   "label": "Dari atas → putar balik",
+   "n": 60,
+   "waktu_tempuh_rata_s": 1385.4,
+   "waktu_tempuh_p85_s": 1795.7,
+   "tundaan_rata_s": 1288.3
+  }
+ },
+ "tundaan_rata_semua_s": 430.6,
+ "kendaraan_diukur": 6698,
+ "belum_selesai": 634,
+ "antrean_turun_rata_m": 633.8,
+ "antrean_turun_maks_m": 680.8,
+ "antrean_turun_p95_m": 680.0,
+ "antrean_naik_rata_m": 141.7,
+ "antrean_naik_maks_m": 405.2,
+ "antrean_naik_p95_m": 307.0,
+ "antrean_gerlong_rata_m": 119.8,
+ "antrean_gerlong_maks_m": 269.7,
+ "antrean_gerlong_p95_m": 226.9,
+ "teleport": 2,
+ "seed": 3,
+ "tag": "S0_tahap1_seed3",
+ "wall_s": 1725.9
+}

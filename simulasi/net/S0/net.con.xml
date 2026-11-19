@@ -1,0 +1,22 @@
+<connections>
+  <connection from="SB_G_A" to="SB_A_S" fromLane="0" toLane="0" />
+  <connection from="SB_G_A" to="SB_A_S" fromLane="1" toLane="1" />
+  <connection from="SB_G_A" to="NB_A_G" fromLane="1" toLane="0" speed="3.0"/>
+  <connection from="SB_G_A" to="KAH_out" fromLane="0" toLane="0" />
+  <connection from="NB_S_A" to="NB_A_G" fromLane="0" toLane="0" />
+  <connection from="NB_S_A" to="NB_A_G" fromLane="1" toLane="1" />
+  <connection from="NB_S_A" to="KAH_out" fromLane="1" toLane="0" />
+  <connection from="KAH_in" to="SB_A_S" fromLane="0" toLane="0" />
+  <connection from="KAH_in" to="NB_A_G" fromLane="0" toLane="1" />
+  <connection from="NB_A_G" to="NB_G_B" fromLane="0" toLane="0" />
+  <connection from="NB_A_G" to="NB_G_B" fromLane="1" toLane="1" />
+  <connection from="NB_A_G" to="GER_out" fromLane="0" toLane="0" />
+  <connection from="SB_B_G" to="SB_G_A" fromLane="0" toLane="0" />
+  <connection from="SB_B_G" to="SB_G_A" fromLane="1" toLane="1" />
+  <connection from="GER_in" to="NB_G_B" fromLane="0" toLane="0" />
+  <connection from="NB_G_B" to="NB_B_N" fromLane="0" toLane="0" />
+  <connection from="NB_G_B" to="NB_B_N" fromLane="1" toLane="1" />
+  <connection from="NB_G_B" to="SB_B_G" fromLane="1" toLane="0" speed="3.0"/>
+  <connection from="SB_N_B" to="SB_B_G" fromLane="0" toLane="0" />
+  <connection from="SB_N_B" to="SB_B_G" fromLane="1" toLane="1" />
+</connections>

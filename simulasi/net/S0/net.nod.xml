@@ -1,0 +1,9 @@
+<nodes>
+  <node id="S" x="-58.94" y="-450.00" z="-20.41" type="dead_end" />
+  <node id="A" x="-11.49" y="-67.20" z="-1.65" type="priority" />
+  <node id="G" x="-5.59" y="-33.50" z="0.03" type="priority" />
+  <node id="B" x="21.40" y="72.10" z="5.33" type="priority" />
+  <node id="N" x="52.97" y="430.00" z="32.21" type="dead_end" />
+  <node id="GW" x="-428.56" y="74.19" z="4.06" type="dead_end" />
+  <node id="KE" x="159.99" y="-88.28" z="-1.10" type="dead_end" />
+</nodes>
