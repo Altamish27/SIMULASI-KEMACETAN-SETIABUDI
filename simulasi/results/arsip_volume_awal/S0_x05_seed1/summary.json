@@ -1,0 +1,105 @@
+{
+ "scenario": "S0_x05",
+ "od": {
+  "NB_thru": {
+   "label": "Dari bawah → lurus ke atas",
+   "n": 1652,
+   "waktu_tempuh_rata_s": 111.1,
+   "waktu_tempuh_p85_s": 128.3,
+   "tundaan_rata_s": 14.2
+  },
+  "SB_thru": {
+   "label": "Dari atas → lurus ke bawah",
+   "n": 1675,
+   "waktu_tempuh_rata_s": 106.3,
+   "waktu_tempuh_p85_s": 120.2,
+   "tundaan_rata_s": 11.7
+  },
+  "NB_ger": {
+   "label": "Dari bawah → Gerlong",
+   "n": 159,
+   "waktu_tempuh_rata_s": 104.0,
+   "waktu_tempuh_p85_s": 118.0,
+   "tundaan_rata_s": 15.4
+  },
+  "NB_uturn": {
+   "label": "Dari bawah → putar balik",
+   "n": 68,
+   "waktu_tempuh_rata_s": 121.2,
+   "waktu_tempuh_p85_s": 134.2,
+   "tundaan_rata_s": 23.1
+  },
+  "GER_north": {
+   "label": "Gerlong → atas",
+   "n": 164,
+   "waktu_tempuh_rata_s": 136.5,
+   "waktu_tempuh_p85_s": 161.5,
+   "tundaan_rata_s": 25.0
+  },
+  "SB_ger": {
+   "label": "Dari atas (Lembang) → Gerlong",
+   "n": 147,
+   "waktu_tempuh_rata_s": 150.8,
+   "waktu_tempuh_p85_s": 176.9,
+   "tundaan_rata_s": 32.8
+  },
+  "GER_south": {
+   "label": "Gerlong → bawah",
+   "n": 150,
+   "waktu_tempuh_rata_s": 140.5,
+   "waktu_tempuh_p85_s": 164.8,
+   "tundaan_rata_s": 33.1
+  },
+  "SB_kah": {
+   "label": "SB_kah",
+   "n": 31,
+   "waktu_tempuh_rata_s": 103.5,
+   "waktu_tempuh_p85_s": 108.1,
+   "tundaan_rata_s": 12.6
+  },
+  "KAH_north": {
+   "label": "KAH_north",
+   "n": 11,
+   "waktu_tempuh_rata_s": 111.5,
+   "waktu_tempuh_p85_s": 117.6,
+   "tundaan_rata_s": 19.4
+  },
+  "SB_uturn": {
+   "label": "Dari atas → putar balik",
+   "n": 44,
+   "waktu_tempuh_rata_s": 164.3,
+   "waktu_tempuh_p85_s": 190.7,
+   "tundaan_rata_s": 34.8
+  },
+  "KAH_south": {
+   "label": "KAH_south",
+   "n": 14,
+   "waktu_tempuh_rata_s": 72.0,
+   "waktu_tempuh_p85_s": 84.5,
+   "tundaan_rata_s": 10.5
+  },
+  "NB_kah": {
+   "label": "NB_kah",
+   "n": 13,
+   "waktu_tempuh_rata_s": 77.5,
+   "waktu_tempuh_p85_s": 94.3,
+   "tundaan_rata_s": 14.3
+  }
+ },
+ "tundaan_rata_semua_s": 15.4,
+ "kendaraan_diukur": 4128,
+ "belum_selesai": 124,
+ "antrean_turun_rata_m": 5.2,
+ "antrean_turun_maks_m": 68.8,
+ "antrean_turun_p95_m": 26.0,
+ "antrean_naik_rata_m": 4.6,
+ "antrean_naik_maks_m": 74.9,
+ "antrean_naik_p95_m": 27.8,
+ "antrean_gerlong_rata_m": 4.4,
+ "antrean_gerlong_maks_m": 39.1,
+ "antrean_gerlong_p95_m": 23.8,
+ "teleport": 0,
+ "seed": 1,
+ "tag": "S0_x05_seed1",
+ "wall_s": 70.9
+}

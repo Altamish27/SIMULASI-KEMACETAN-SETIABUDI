@@ -1,7 +1,8 @@
 """Buat demand (rute + arus jam puncak), tipe kendaraan, halte/ngetem angkot, dan program APILL.
 
-Volume = ASUMSI jam puncak (tidak ada hitungan lapangan) disusun agar derajat kejenuhan
-Setiabudi ≈ 0,8–0,9 menurut PKJI 2023 (emp: SM 0,25; KR 1,0; KB 1,2). Semua bisa diskalakan.
+Volume = ASUMSI jam puncak (tidak ada hitungan lapangan). VOLUMES di bawah = asumsi awal; arus yang
+dipakai = VOLUMES × KALIBRASI. Faktor KALIBRASI dipilih agar tundaan S0 "dari Lembang → Gerlong"
+cocok dengan pengalaman lapangan (macet biasa, < 10 menit). Semua bisa diskalakan lagi dengan --scale.
 
 Pemakaian: python tools/make_scenario.py [S0 S1 S2] [--scale 1.0]
 """
@@ -18,7 +19,10 @@ import sumolib  # noqa: E402
 SCEN_DIR = os.path.join(geo.ROOT, "scenarios")
 
 # ------------------------------------------------------------------ ASUMSI VOLUME (kend/jam)
-VOLUMES = {
+# Kalibrasi 23-11-2026: uji S0 pada 50/60/70/80/100% asumsi awal → tundaan Lembang→Gerlong
+# 0,5 / 0,9 / 8,2 / 16 / 27 menit. Pengamatan lapangan: "macet biasa, kurang dari 10 menit" → 0,70.
+KALIBRASI = 0.70
+VOLUMES = {  # asumsi awal (sebelum kalibrasi)
     "SB_total": 3600,   # arus dari atas (Lembang/UPI) ke bawah
     "NB_total": 3800,   # arus dari bawah (kota) ke atas
     "SB_ger": 280,      # dari atas → Gerlong (gerakan utama yang dipersoalkan)
@@ -152,7 +156,7 @@ def build_flows(sc, scale=1.0, variant=None):
         mix = MIX["main"] if r.endswith("thru") else MIX["ger"] if r.startswith("GER") or r.endswith("ger") \
             else MIX["kah"] if "KAH" in r or r.endswith("kah") else MIX["turn"]
         for vt, share in mix.items():
-            vph = V[r] * share * scale
+            vph = V[r] * share * scale * KALIBRASI
             if vt in HEAVY and heavy_banned(sc, r, variant):
                 # tetap ada di jaringan sebagai arus lurus (dialihkan ke titik putar lain di luar area)
                 tgt = "SB_thru" if r.startswith("SB") else "NB_thru"
@@ -314,7 +318,7 @@ def make(sc, scale=1.0, variant=None, folder=None, step=0.5):
     flows = write_routes(sc, scale, variant=variant, folder=folder)
     stops = write_additional(sc, net, folder=folder)
     write_config(sc, folder=folder, step=step)
-    meta = {"scenario": sc, "scale": scale, "volumes": VOLUMES, "mix": MIX, "stops": stops,
+    meta = {"scenario": sc, "scale": scale, "kalibrasi": KALIBRASI, "volumes": VOLUMES, "mix": MIX, "stops": stops,
             "flows": [[r, vt, round(v, 1)] for r, vt, v in flows]}
     json.dump(meta, open(os.path.join(SCEN_DIR, folder, "meta.json"), "w", encoding="utf-8"), indent=1)
     tot = sum(f[2] for f in flows)

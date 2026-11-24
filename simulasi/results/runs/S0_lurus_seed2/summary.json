@@ -1,0 +1,35 @@
+{
+ "scenario": "S0_lurus",
+ "od": {
+  "NB_thru": {
+   "label": "Dari bawah → lurus ke atas",
+   "n": 2612,
+   "waktu_tempuh_rata_s": 116.7,
+   "waktu_tempuh_p85_s": 134.2,
+   "tundaan_rata_s": 19.9
+  },
+  "SB_thru": {
+   "label": "Dari atas → lurus ke bawah",
+   "n": 2480,
+   "waktu_tempuh_rata_s": 106.7,
+   "waktu_tempuh_p85_s": 119.8,
+   "tundaan_rata_s": 11.4
+  }
+ },
+ "tundaan_rata_semua_s": 15.8,
+ "kendaraan_diukur": 5092,
+ "belum_selesai": 147,
+ "antrean_turun_rata_m": 0.0,
+ "antrean_turun_maks_m": 0.0,
+ "antrean_turun_p95_m": 0.0,
+ "antrean_naik_rata_m": 10.1,
+ "antrean_naik_maks_m": 108.8,
+ "antrean_naik_p95_m": 45.0,
+ "antrean_gerlong_rata_m": 0.0,
+ "antrean_gerlong_maks_m": 0.0,
+ "antrean_gerlong_p95_m": 0.0,
+ "teleport": 0,
+ "seed": 2,
+ "tag": "S0_lurus_seed2",
+ "wall_s": 123.2
+}

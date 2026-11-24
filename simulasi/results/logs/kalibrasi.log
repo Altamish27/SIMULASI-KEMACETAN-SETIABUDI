@@ -1,0 +1,71 @@
+[     0s] mulai S0_x05_seed1
+[     0s] mulai S0_x05_seed2
+[     0s] mulai S0_x06_seed1
+[     0s] mulai S0_x06_seed2
+[     0s] mulai S0_x07_seed1
+[     0s] mulai S0_x07_seed2
+[    75s] selesai S0_x05_seed1 rc=0
+[    75s] selesai S0_x05_seed2 rc=0
+[    81s] selesai S0_x06_seed1 rc=0
+[    81s] selesai S0_x06_seed2 rc=0
+[   165s] selesai S0_x07_seed1 rc=0
+[   363s] selesai S0_x07_seed2 rc=0
+# Ringkasan Hasil Simulasi — Puteran Jl. Dr. Setiabudi × Gerlong
+
+Jam puncak 60 menit (setelah pemanasan 10 menit), 3 seed acak per skenario. Nilai = rata-rata ± simpangan baku antar seed. Volume = asumsi jam puncak (lihat scenarios/*/meta.json).
+
+## Skenario
+- **S0 Eksisting** — S0 Eksisting
+- **Tahap 1 (murah)** — Tahap 1: larang truk/bus putar balik + tertib angkot
+- **S1 APILL** — S1: APILL adaptif + lajur khusus belok kanan
+- **S2 Flyover** — S2: U-turn layang
+
+## Indikator utama
+
+| Indikator | S0 Eksisting | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|---|
+| Tundaan rata-rata semua kendaraan (s) | 750 ± 112 | 416 ± 24 | 426 ± 80 | 229 ± 4 |
+| Panjang tersendat Arah turun (m) | 636 ± 21 | 628 ± 17 | 207 ± 60 | 85 ± 35 |
+| Panjang tersendat Arah naik (m) | 267 ± 28 | 131 ± 10 | 183 ± 26 | 208 ± 19 |
+| Panjang tersendat Jl. Gegerkalong Girang (m) | 332 ± 51 | 70 ± 48 | 10 ± 1 | 10 ± 3 |
+| Kendaraan selesai diukur | 5895 ± 390 | 6767 ± 132 | 6708 ± 205 | 7528 ± 154 |
+
+## Waktu tempuh rata-rata per pergerakan (detik)
+
+| Pergerakan | S0 Eksisting | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|---|
+| Lembang → Gerlong | 1700 ± 215 | 1292 ± 98 | 404 ± 130 | 482 ± 109 |
+| Lurus turun | 781 ± 53 | 948 ± 91 | 898 ± 60 | 166 ± 25 |
+| Lurus naik | 818 ± 195 | 256 ± 6 | 380 ± 150 | 527 ± 32 |
+| Bawah → Gerlong | 718 ± 210 | 220 ± 9 | 325 ± 130 | 383 ± 29 |
+| Gerlong → atas | 920 ± 170 | 227 ± 58 | 144 ± 3 | 145 ± 7 |
+| Gerlong → bawah | 939 ± 162 | 252 ± 64 | 157 ± 5 | 221 ± 7 |
+| Atas → putar balik | 1690 ± 243 | 1311 ± 128 | 403 ± 123 | 497 ± 77 |
+| Bawah → putar balik | 664 ± 257 | 248 ± 14 | 275 ± 40 | 366 ± 26 |
+
+## Perubahan terhadap S0 (waktu tempuh)
+
+| Pergerakan | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|
+| Lembang → Gerlong | -24% | -76% | -72% |
+| Lurus turun | +21% | +15% | -79% |
+| Lurus naik | -69% | -54% | -36% |
+| Bawah → Gerlong | -69% | -55% | -47% |
+| Gerlong → atas | -75% | -84% | -84% |
+| Gerlong → bawah | -73% | -83% | -76% |
+| Atas → putar balik | -22% | -76% | -71% |
+| Bawah → putar balik | -63% | -59% | -45% |
+
+## Uji sensitivitas: kepadatan 80% dari asumsi jam puncak
+
+2 seed per skenario. Tujuannya memeriksa apakah urutan/kesimpulan berubah bila volume asumsi terlalu tinggi.
+
+| Indikator | S0 Eksisting | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|---|
+| Tundaan rata-rata (s) | 291 ± 49 | 122 ± 58 | 95 ± 8 | 33 ± 2 |
+| Lembang → Gerlong (s) | 1053 ± 207 | 452 ± 158 | 206 ± 5 | 267 ± 23 |
+| Lurus turun (s) | 503 ± 178 | 324 ± 126 | 283 ± 17 | 111 ± 1 |
+| Lurus naik (s) | 244 ± 60 | 119 ± 1 | 129 ± 10 | 136 ± 4 |
+
+Grafik: `grafik_waktu_tempuh.png`, `grafik_antrean.png`, `grafik_tundaan.png`, `grafik_antrean_turun_waktu.png`, `grafik_antrean_naik_waktu.png`.
+SEMUA SELESAI

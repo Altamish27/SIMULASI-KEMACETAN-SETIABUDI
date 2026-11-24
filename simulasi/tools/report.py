@@ -163,6 +163,8 @@ def main():
     json.dump(data, open(os.path.join(RES, "ringkasan.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     grouped_hbar("grafik_waktu_tempuh.png", "Waktu tempuh rata-rata per pergerakan (detik, ±1 sd antar seed)",
                  "detik", OD, lambda s, k: data[s]["od"][k]["tt"], scen)
+    grouped_hbar("grafik_tundaan_pergerakan.png", "Tundaan di simpang Gerlong per pergerakan (detik, ±1 sd antar seed)",
+                 "detik", OD, lambda s, k: data[s]["od"][k]["loss"], scen)
     grouped_hbar("grafik_antrean.png", "Panjang jalan tersendat rata-rata (meter)", "meter", CORR,
                  lambda s, k: data[s][f"antrean_{k}_rata_m"], scen)
     bar_simple("grafik_tundaan.png", "Tundaan rata-rata seluruh kendaraan (detik/kendaraan)", "detik",
@@ -172,7 +174,9 @@ def main():
 
     L = ["# Ringkasan Hasil Simulasi — Puteran Jl. Dr. Setiabudi × Gerlong", "",
          f"Jam puncak 60 menit (setelah pemanasan 10 menit), {data[scen[0]]['n_seed']} seed acak per skenario. "
-         "Nilai = rata-rata ± simpangan baku antar seed. Volume = asumsi jam puncak (lihat scenarios/*/meta.json).", "",
+         "Nilai = rata-rata ± simpangan baku antar seed. Volume = asumsi jam puncak yang DIKALIBRASI (70% asumsi awal = "
+         "5.656 kend/jam) agar tundaan S0 dari Lembang → Gerlong sesuai pengamatan lapangan (macet biasa, < 10 menit). "
+         "Tundaan = tambahan waktu dibanding jalan lancar, termasuk menunggu di antrean akibat simpang/puteran.", "",
          "## Skenario"]
     for s, l in SCEN:
         if s in data:
@@ -184,7 +188,21 @@ def main():
     for c, l in CORR:
         L.append(f"| Panjang tersendat {l} (m) | " + " | ".join(fmt(data[s][f'antrean_{c}_rata_m']) for s in scen) + " |")
     L.append("| Kendaraan selesai diukur | " + " | ".join(fmt(data[s]["kendaraan_diukur"]) for s in scen) + " |")
+    L += ["", "## Tundaan di simpang Gerlong per pergerakan (detik) — indikator utama", "",
+          "| Pergerakan | " + " | ".join(SHORT[s] for s in scen) + " |", "|---|" + "---|" * len(scen)]
+    for od, l in OD:
+        L.append(f"| {l} | " + " | ".join(fmt(data[s]["od"][od]["loss"]) for s in scen) + " |")
+    L += ["", "## Perubahan tundaan terhadap S0", "",
+          "| Pergerakan | " + " | ".join(SHORT[s] for s in scen[1:]) + " |", "|---|" + "---|" * (len(scen) - 1)]
+    for od, l in OD:
+        base = data["S0"]["od"][od]["loss"][0] if "S0" in data else None
+        cells = []
+        for s in scen[1:]:
+            v = data[s]["od"][od]["loss"][0]
+            cells.append("–" if not base or v is None else f"{(v - base) / base * 100:+.0f}%")
+        L.append(f"| {l} | " + " | ".join(cells) + " |")
     L += ["", "## Waktu tempuh rata-rata per pergerakan (detik)", "",
+          "Diukur dari batas model (±450 m dari mulut Gerlong) sampai keluar model; rute S2 lebih panjang karena loop flyover.", "",
           "| Pergerakan | " + " | ".join(SHORT[s] for s in scen) + " |", "|---|" + "---|" * len(scen)]
     for od, l in OD:
         L.append(f"| {l} | " + " | ".join(fmt(data[s]["od"][od]["tt"]) for s in scen) + " |")
@@ -199,22 +217,36 @@ def main():
         L.append(f"| {l} | " + " | ".join(cells) + " |")
     sens = {}
     for sc, _ in SCEN:
-        runs = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(RES, "runs", f"{sc}_x08_seed*", "summary.json")))]
+        runs = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(RES, "runs", f"{sc}_p15_seed*", "summary.json")))]
         if runs:
             sens[sc] = {"n": len(runs), "delay": ms([r["tundaan_rata_semua_s"] for r in runs]),
-                        "lg": ms([r["od"].get("SB_ger", {}).get("waktu_tempuh_rata_s") for r in runs]),
-                        "sbt": ms([r["od"].get("SB_thru", {}).get("waktu_tempuh_rata_s") for r in runs]),
-                        "nbt": ms([r["od"].get("NB_thru", {}).get("waktu_tempuh_rata_s") for r in runs])}
+                        "lg": ms([r["od"].get("SB_ger", {}).get("tundaan_rata_s") for r in runs]),
+                        "sbt": ms([r["od"].get("SB_thru", {}).get("tundaan_rata_s") for r in runs]),
+                        "nbt": ms([r["od"].get("NB_thru", {}).get("tundaan_rata_s") for r in runs]),
+                        "qg": ms([r.get("antrean_gerlong_rata_m") for r in runs])}
     if sens:
         sc_s = [s for s, _ in SCEN if s in sens]
-        L += ["", "## Uji sensitivitas: kepadatan 80% dari asumsi jam puncak", "",
-              f"{sens[sc_s[0]]['n']} seed per skenario. Tujuannya memeriksa apakah urutan/kesimpulan berubah bila volume asumsi terlalu tinggi.", "",
+        L += ["", "## Uji sensitivitas: arus jam puncak +15%", "",
+              f"{sens[sc_s[0]]['n']} seed per skenario. Tujuannya memeriksa apakah urutan/kesimpulan berubah bila arus lebih padat dari hasil kalibrasi.", "",
               "| Indikator | " + " | ".join(SHORT[s] for s in sc_s) + " |", "|---|" + "---|" * len(sc_s)]
-        for key, lab in (("delay", "Tundaan rata-rata (s)"), ("lg", "Lembang → Gerlong (s)"), ("sbt", "Lurus turun (s)"), ("nbt", "Lurus naik (s)")):
+        for key, lab in (("delay", "Tundaan rata-rata semua (s)"), ("lg", "Tundaan Lembang → Gerlong (s)"), ("sbt", "Tundaan lurus turun (s)"), ("nbt", "Tundaan lurus naik (s)"), ("qg", "Antrean Gerlong (m)")):
             L.append(f"| {lab} | " + " | ".join(fmt(sens[s][key]) for s in sc_s) + " |")
-        data["_sensitivitas_80"] = sens
+        data["_sensitivitas_p15"] = sens
         json.dump(data, open(os.path.join(RES, "ringkasan.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
-    L += ["", "Grafik: `grafik_waktu_tempuh.png`, `grafik_antrean.png`, `grafik_tundaan.png`, "
+    ctl = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(RES, "runs", "S0_lurus_seed*", "summary.json")))]
+    if ctl and "S0" in data:
+        d0 = data["S0"]
+        L += ["", "## Uji kontrol (validasi logika)", "",
+              f"S0 dengan arus utama yang sama tetapi semua kendaraan lurus (tanpa belok/putar balik), {len(ctl)} seed:", "",
+              "| Indikator | Uji kontrol (semua lurus) | S0 dengan puteran |", "|---|---|---|",
+              f"| Tundaan rata-rata (s) | {fmt(ms([r['tundaan_rata_semua_s'] for r in ctl]))} | {fmt(d0['tundaan_rata_semua_s'])} |",
+              f"| Tundaan lurus turun (s) | {fmt(ms([r['od'].get('SB_thru', {}).get('tundaan_rata_s') for r in ctl]))} | {fmt(d0['od']['SB_thru']['loss'])} |",
+              f"| Antrean arah turun (m) | {fmt(ms([r.get('antrean_turun_rata_m') for r in ctl]))} | {fmt(d0['antrean_turun_rata_m'])} |"]
+        data["_kontrol"] = {"delay": ms([r["tundaan_rata_semua_s"] for r in ctl]),
+                            "sbt": ms([r["od"].get("SB_thru", {}).get("tundaan_rata_s") for r in ctl]),
+                            "qt": ms([r.get("antrean_turun_rata_m") for r in ctl])}
+        json.dump(data, open(os.path.join(RES, "ringkasan.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    L += ["", "Grafik: `grafik_tundaan_pergerakan.png`, `grafik_waktu_tempuh.png`, `grafik_antrean.png`, `grafik_tundaan.png`, "
           "`grafik_antrean_turun_waktu.png`, `grafik_antrean_naik_waktu.png`."]
     open(os.path.join(RES, "ringkasan.md"), "w", encoding="utf-8").write("\n".join(L))
     # salin ke aplikasi web (halaman hasil.html)

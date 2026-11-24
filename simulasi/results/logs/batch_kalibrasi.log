@@ -1,0 +1,100 @@
+[     0s] mulai S0_seed1
+[     0s] mulai S0_seed2
+[     0s] mulai S0_seed3
+[     0s] mulai S0_tahap1_seed1
+[     0s] mulai S0_tahap1_seed2
+[     0s] mulai S0_tahap1_seed3
+[     0s] mulai S1_seed1
+[     0s] mulai S1_seed2
+[   102s] selesai S0_tahap1_seed2 rc=0
+[   105s] mulai S1_seed3
+[   117s] selesai S0_tahap1_seed1 rc=0
+[   120s] mulai S2_seed1
+[   120s] selesai S0_tahap1_seed3 rc=0
+[   123s] mulai S2_seed2
+[   123s] selesai S1_seed2 rc=0
+[   126s] mulai S2_seed3
+[   126s] selesai S1_seed1 rc=0
+[   177s] selesai S0_seed3 rc=0
+[   190s] selesai S2_seed1 rc=0
+[   196s] selesai S0_seed1 rc=0
+[   199s] selesai S2_seed2 rc=0
+[   211s] selesai S1_seed3 rc=0
+[   217s] selesai S2_seed3 rc=0
+[   295s] selesai S0_seed2 rc=0
+# Ringkasan Hasil Simulasi — Puteran Jl. Dr. Setiabudi × Gerlong
+
+Jam puncak 60 menit (setelah pemanasan 10 menit), 3 seed acak per skenario. Nilai = rata-rata ± simpangan baku antar seed. Volume = asumsi jam puncak yang DIKALIBRASI (70% asumsi awal = 5.656 kend/jam) agar tundaan S0 dari Lembang → Gerlong sesuai pengamatan lapangan (macet biasa, < 10 menit). Tundaan = tambahan waktu dibanding jalan lancar, termasuk menunggu di antrean akibat simpang/puteran.
+
+## Skenario
+- **S0 Eksisting** — S0 Eksisting
+- **Tahap 1 (murah)** — Tahap 1: larang truk/bus putar balik + tertib angkot
+- **S1 APILL** — S1: APILL adaptif + lajur khusus belok kanan
+- **S2 Flyover** — S2: U-turn layang
+
+## Indikator utama
+
+| Indikator | S0 Eksisting | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|---|
+| Tundaan rata-rata semua kendaraan (s) | 116 ± 34 | 23 ± 4 | 38 ± 6 | 20 ± 1 |
+| Panjang tersendat Arah turun (m) | 311 ± 126 | 24 ± 10 | 39 ± 13 | 3 ± 1 |
+| Panjang tersendat Arah naik (m) | 52 ± 22 | 9 ± 3 | 14 ± 1 | 14 ± 2 |
+| Panjang tersendat Jl. Gegerkalong Girang (m) | 25 ± 8 | 3 ± 0 | 4 ± 0 | 3 ± 1 |
+| Kendaraan selesai diukur | 5673 ± 103 | 5676 ± 115 | 5682 ± 108 | 5684 ± 97 |
+
+## Tundaan di simpang Gerlong per pergerakan (detik) — indikator utama
+
+| Pergerakan | S0 Eksisting | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|---|
+| Lembang → Gerlong | 449 ± 95 | 55 ± 12 | 76 ± 28 | 52 ± 11 |
+| Lurus turun | 157 ± 79 | 23 ± 6 | 54 ± 10 | 14 ± 1 |
+| Lurus naik | 52 ± 15 | 18 ± 2 | 24 ± 1 | 21 ± 2 |
+| Bawah → Gerlong | 53 ± 18 | 18 ± 2 | 21 ± 1 | 24 ± 3 |
+| Gerlong → atas | 70 ± 16 | 19 ± 1 | 21 ± 1 | 20 ± 1 |
+| Gerlong → bawah | 91 ± 21 | 36 ± 5 | 29 ± 2 | 35 ± 1 |
+| Atas → putar balik | 486 ± 133 | 52 ± 7 | 82 ± 36 | 53 ± 5 |
+| Bawah → putar balik | 78 ± 15 | 36 ± 8 | 31 ± 4 | 33 ± 1 |
+
+## Perubahan tundaan terhadap S0
+
+| Pergerakan | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|
+| Lembang → Gerlong | -88% | -83% | -88% |
+| Lurus turun | -85% | -66% | -91% |
+| Lurus naik | -65% | -55% | -59% |
+| Bawah → Gerlong | -66% | -59% | -54% |
+| Gerlong → atas | -72% | -70% | -71% |
+| Gerlong → bawah | -60% | -68% | -62% |
+| Atas → putar balik | -89% | -83% | -89% |
+| Bawah → putar balik | -54% | -61% | -58% |
+
+## Waktu tempuh rata-rata per pergerakan (detik)
+
+Diukur dari batas model (±450 m dari mulut Gerlong) sampai keluar model; rute S2 lebih panjang karena loop flyover.
+
+| Pergerakan | S0 Eksisting | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|---|
+| Lembang → Gerlong | 552 ± 94 | 171 ± 11 | 186 ± 28 | 210 ± 13 |
+| Lurus turun | 249 ± 78 | 118 ± 5 | 148 ± 10 | 108 ± 1 |
+| Lurus naik | 148 ± 14 | 114 ± 2 | 120 ± 1 | 117 ± 2 |
+| Bawah → Gerlong | 141 ± 17 | 107 ± 2 | 109 ± 1 | 112 ± 2 |
+| Gerlong → atas | 179 ± 15 | 128 ± 0 | 129 ± 3 | 129 ± 1 |
+| Gerlong → bawah | 202 ± 22 | 146 ± 5 | 139 ± 3 | 174 ± 2 |
+| Atas → putar balik | 597 ± 137 | 175 ± 5 | 197 ± 35 | 217 ± 10 |
+| Bawah → putar balik | 174 ± 14 | 131 ± 9 | 125 ± 6 | 158 ± 2 |
+
+## Perubahan terhadap S0 (waktu tempuh)
+
+| Pergerakan | Tahap 1 (murah) | S1 APILL | S2 Flyover |
+|---|---|---|---|
+| Lembang → Gerlong | -69% | -66% | -62% |
+| Lurus turun | -53% | -41% | -56% |
+| Lurus naik | -23% | -19% | -21% |
+| Bawah → Gerlong | -24% | -23% | -21% |
+| Gerlong → atas | -29% | -28% | -28% |
+| Gerlong → bawah | -28% | -31% | -14% |
+| Atas → putar balik | -71% | -67% | -64% |
+| Bawah → putar balik | -25% | -28% | -9% |
+
+Grafik: `grafik_tundaan_pergerakan.png`, `grafik_waktu_tempuh.png`, `grafik_antrean.png`, `grafik_tundaan.png`, `grafik_antrean_turun_waktu.png`, `grafik_antrean_naik_waktu.png`.
+SEMUA SELESAI

@@ -39,14 +39,16 @@ Halaman hasil: `http://127.0.0.1:8000/hasil.html`.
 - **Kendaraan**: motor (model *sublane*, menyelip), mobil, angkot, dump truck, bus; kendaraan berat lebih lambat saat menanjak.
 - **Perilaku lokal** (`tools/control.py`): putar balik truk/bus 18–35 s maju-mundur sambil menutup lajur luar,
   mobil/angkot +2–6 s; angkot ngetem dengan durasi acak; pengemudi "maksa" masuk setelah menunggu (*impatience*).
-- **Volume**: tidak ada hitungan lapangan → **asumsi jam puncak** (total 8.080 kend/jam; lihat `tools/make_scenario.py`,
-  bagian `VOLUMES` dan `MIX`) disusun agar derajat kejenuhan ≈ 0,8–0,9 (PKJI 2023). Uji sensitivitas 80% disertakan.
-- **Validasi logika**: uji kontrol (volume sama, semua lurus tanpa belok/putar balik) → tundaan 37 s, antrean arah turun
-  0 m; dengan puteran (S0) → tundaan 274 s. Artinya kemacetan memang berasal dari puteran, bukan dari volume.
+- **Volume**: tidak ada hitungan lapangan → asumsi awal 8.080 kend/jam (`VOLUMES` di `tools/make_scenario.py`) lalu
+  **dikalibrasi** (`KALIBRASI = 0.70` → 5.656 kend/jam) agar tundaan S0 dari Lembang → Gerlong cocok dengan pengamatan
+  lapangan ("macet biasa, < 10 menit"); hasil S0: 7,5 menit. Uji S0 pada 50/60/70/80/100% → 0,5/0,9/8,2/16/27 menit.
+  Uji sensitivitas arus +15% disertakan. Hasil volume awal diarsipkan di `results/arsip_volume_awal/`.
+- **Validasi logika**: uji kontrol (volume sama, semua lurus tanpa belok/putar balik) → tundaan 15 s, antrean arah turun
+  0 m; dengan puteran (S0) → tundaan 116 s, antrean 311 m. Artinya kemacetan memang berasal dari puteran, bukan dari volume.
 
 ## Keterbatasan (wajib disebut di laporan)
 
-1. Volume & komposisi kendaraan adalah asumsi; angka absolut (detik) bersifat indikatif, **perbandingan antar skenario** yang utama.
+1. Volume & komposisi kendaraan adalah asumsi yang dikalibrasi dari pengalaman lapangan (belum hitungan resmi); angka absolut (detik) bersifat indikatif, **perbandingan antar skenario** yang utama.
 2. Durasi manuver putar balik truk/bus dan perilaku ngetem berupa parameter perkiraan (dapat diubah di `tools/control.py`).
 3. Pejalan kaki tidak dimodelkan dalam SUMO.
 4. Desain flyover S2 adalah pra-rancangan geometrik (kemiringan, ruang bebas, radius), bukan desain struktur.

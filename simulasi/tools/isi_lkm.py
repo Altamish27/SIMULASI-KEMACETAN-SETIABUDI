@@ -104,7 +104,7 @@ def page2(c):
         "<b>putar balik di bukaan A</b> (±35 m sebelum mulut Gerlong) lalu belok kiri, sedangkan kendaraan dari arah kota putar "
         "balik di <b>bukaan B</b> (dekat gerbang UPI). Jalan hanya 2 lajur per arah (±7 m), sehingga setiap kendaraan yang "
         "putar balik, terutama <b>truk dan bus</b>, memotong dan menutup kedua arah; diperparah angkot ngetem dan tanjakan ±4,9%. "
-        "Simulasi jam puncak: perjalanan Lembang → Gerlong ±28 menit, antrean arah turun ±640 m."), size=8.6, color=WHITE)
+        "Simulasi jam puncak (dikalibrasi): kendaraan dari Lembang tertahan ±7,5 menit sebelum bisa masuk Gerlong; antrean arah turun ±310 m."), size=8.6, color=WHITE)
     box(c, 48, 339, 532, 408, (
         "<b>Sosial–ekonomi (utama):</b> waktu tempuh warga, mahasiswa UPI dan pekerja bertambah; pemborosan BBM serta "
         "keterlambatan angkutan umum (angkot, bus) dan angkutan barang (dump truck).\n\n"
@@ -118,8 +118,8 @@ def page2(c):
     box(c, 64, 508, 286, 543, "Terutama <b>jam sibuk pagi</b> (berangkat kerja/kuliah) dan <b>sore</b> (pulang), serta "
         "<b>akhir pekan</b> saat arus wisata dari/ke Lembang; makin parah bila ada truk/bus yang putar balik.", size=S)
     box(c, 64, 555, 286, 590, "Berulang setiap hari pada jam sibuk. Pembatasan puteran sudah ada sejak ≥ Des 2023 "
-        "(water barrier, Google Street View) lalu dipermanenkan dengan pagar baru. Simulasi: macet terbentuk ±8 menit "
-        "setelah jam puncak dimulai dan bertahan sepanjang jam puncak.", size=S)
+        "(water barrier, Google Street View) lalu dipermanenkan dengan pagar baru. Simulasi: antrean terbentuk dalam ±10 menit "
+        "dan bertahan sepanjang jam puncak (puncak ±450–680 m).", size=S)
     box(c, 64, 602, 286, 637, "Kendaraan menunggu celah di lajur kanan → arah turun tinggal 1 lajur; saat putar balik "
         "memotong 2 lajur arah naik → arah naik berhenti; truk/bus harus maju-mundur menutup kedua arah; angkot ngetem di "
         "sudut Gerlong.", size=S)
@@ -129,25 +129,25 @@ def page2(c):
         "c) Arus padat, banyak kendaraan berat, tanjakan 4,9%.\n\n"
         "d) Angkot ngetem di mulut simpang.\n\n"
         "e) Tidak ada APILL/pengaturan di titik konflik.\n\n"
-        "<b>Bukti simulasi:</b> volume sama tanpa putar balik → tundaan 37 s & antrean 0 m; dengan puteran → tundaan 274 s. "
+        "<b>Bukti simulasi:</b> volume sama tanpa putar balik → tundaan 15 s & antrean 0 m; dengan puteran → tundaan 116 s & antrean 310 m. "
         "Jadi penyebab utamanya adalah puteran, bukan semata volume."), size=S)
     box(c, 294, 453, 534, 766, (
         "Memodelkan kondisi nyata dalam <b>mikro-simulasi SUMO</b>, membandingkan beberapa solusi secara terukur, lalu "
         "menerapkan solusi terbaik secara <b>bertahap</b>.\n\n"
         "<b>1. Pemodelan kondisi nyata.</b> Peta OpenStreetMap + citra satelit + Street View + foto/video lapangan: 2 lajur × "
         "3,1 m per arah, median 0,8 m, bukaan A & B, tanjakan 4,86% (SRTM). Kendaraan: motor (menyelip), mobil, angkot, dump "
-        "truck, bus. Perilaku: truk/bus maju-mundur saat putar balik, angkot ngetem. Arus jam puncak 8.080 kend/jam (asumsi, "
-        "PKJI 2023).\n\n"
+        "truck, bus. Perilaku: truk/bus maju-mundur saat putar balik, angkot ngetem. Arus jam puncak 5.656 kend/jam, "
+        "dikalibrasi agar tundaan kondisi sekarang sesuai pengamatan lapangan (&lt; 10 menit).\n\n"
         "<b>2. Tiga alternatif solusi:</b><br/>"
         "• <b>Tahap 1</b> (murah): larangan putar balik truk/bus + penertiban ngetem.<br/>"
         "• <b>S1</b>: buka median di mulut Gerlong + APILL 2 fase adaptif (fase belok kanan 5–14 s) + lajur khusus belok kanan "
         "60 m; bukaan A ditutup.<br/>"
         "• <b>S2</b>: U-turn layang 480 m (dek ±7,5 m, kelandaian ≤ 5%, loop R 13 m).\n\n"
-        "<b>3. Evaluasi:</b> waktu tempuh, tundaan dan panjang antrean (jam puncak 60 menit, 3 seed acak, uji sensitivitas 80%).\n\n"
-        "<b>4. Hasil:</b> waktu Lembang → Gerlong turun <b>76%</b> (S1), 72% (S2), 24% (Tahap 1); antrean Gerlong 332 m → 10 m "
-        "(S1/S2); tundaan rata-rata 750 s → 426 s (S1) / 229 s (S2).\n\n"
-        "<b>5. Rekomendasi bertahap:</b> segera terapkan Tahap 1 → <b>S1 sebagai solusi utama</b> (murah, tanpa pembebasan "
-        "lahan) → S2 sebagai rencana jangka panjang bila arus terus meningkat."), size=7.6)
+        "<b>3. Evaluasi:</b> tundaan per pergerakan dan panjang antrean (jam puncak 60 menit, 3 seed acak, uji sensitivitas arus +15%).\n\n"
+        "<b>4. Hasil:</b> tundaan Lembang → Gerlong 7,5 menit turun <b>88%</b> (Tahap 1), 83% (S1), 88% (S2). Bila arus +15%: "
+        "Tahap 1 mulai goyah (5,2 menit), S1 tetap 2,7 menit, S2 1,4 menit.\n\n"
+        "<b>5. Rekomendasi bertahap:</b> <b>segera Tahap 1</b> (murah, efektif pada kondisi sekarang) → <b>S1</b> bila arus "
+        "naik / Tahap 1 tidak cukup (tanpa pembebasan lahan) → S2 sebagai rencana jangka panjang."), size=7.6)
 
 
 # ------------------------------------------------------------------ halaman 3
@@ -155,10 +155,10 @@ def page3(c):
     S = 7.4
     # Masalah
     white(c, 164, 380, 217, 398)
-    box(c, 166, 380, 360, 408, "<b>Macet akibat puteran di Jl. Setiabudi × Gerlong</b> (Lembang → Gerlong ±28 menit)", size=S)
+    box(c, 166, 380, 360, 408, "<b>Macet akibat puteran di Jl. Setiabudi × Gerlong</b> (dari Lembang tertahan ±7,5 menit)", size=S)
     # Rencana solusi
     white(c, 72, 470, 147, 488)
-    box(c, 46, 463, 159, 516, "<b>Penataan simpang bertahap:</b> APILL adaptif + lajur khusus belok kanan (S1); jangka panjang "
+    box(c, 46, 463, 159, 516, "<b>Penataan bertahap:</b> tertib putar balik & ngetem → APILL adaptif + lajur khusus (S1) → "
         "U-turn layang (S2)", size=7.0)
     # Target capaian: tutup contoh bawaan, gambar ulang garis cabang
     white(c, 308, 470, 532.2, 496.4)     # baris contoh 1-3
@@ -168,8 +168,8 @@ def page3(c):
     c.setLineWidth(2.0)
     c.line(288.5, Y(497.3), 404.4, Y(497.3))
     c.line(404.4, Y(497.3), 404.4, Y(509.0))
-    box(c, 309, 471, 530, 496, "Waktu tempuh Lembang → Gerlong turun ≥ 70%, antrean Gerlong &lt; 20 m, tidak ada truk/bus "
-        "putar balik di jalan 2 lajur (simulasi S1: −76%, antrean 10 m)", size=6.9)
+    box(c, 309, 471, 530, 496, "Tundaan Lembang → Gerlong turun ≥ 80% (&lt; 1,5 menit), antrean Gerlong &lt; 10 m, tidak ada truk/bus "
+        "putar balik di jalan 2 lajur (simulasi: −88% / −83%)", size=6.9)
     # Pembuat kebijakan & pengguna
     white(c, 214, 535, 266, 552)
     box(c, 216, 535, 340, 552, "Dishub, Satlantas & pengelola jalan", size=6.8)
@@ -192,7 +192,7 @@ def page3(c):
         "<b>Pengguna – Langkah 1:</b> patuhi rambu, tidak berhenti/ngetem di mulut simpang, lajur kanan hanya untuk belok kanan.\n\n"
         "<b>Pengguna – Langkah 2:</b> truk/bus memakai titik putar yang lebar atau rute alternatif; penumpang angkot naik-turun "
         "di halte.\n\n"
-        "<b>Capaian (simulasi S1):</b> Lembang → Gerlong −76%, Gerlong → atas −84%, antrean Gerlong 332 m → 10 m."), size=7.6)
+        "<b>Capaian (simulasi):</b> tundaan Lembang → Gerlong 7,5 menit → ±1 menit (Tahap 1 −88%, S1 −83%); antrean arah turun 310 m → 24–39 m."), size=7.6)
 
 
 # ------------------------------------------------------------------ halaman 4
@@ -211,13 +211,13 @@ def page4(c):
         "<b>3. Agen kendaraan</b> – motor (model sublane, menyelip), mobil, angkot hijau, dump truck, bus; lalu lintas lajur kiri.<br/>"
         "<b>4. Perilaku lokal</b> – truk/bus maju-mundur 18–35 s saat putar balik sambil menutup lajur, mobil/angkot +2–6 s, angkot "
         "ngetem, pengemudi “maksa” setelah lama menunggu.<br/>"
-        "<b>5. Arus</b> – jam puncak 8.080 kend/jam (asumsi, PKJI 2023) + uji kontrol dan uji sensitivitas 80%.<br/>"
+        "<b>5. Arus</b> – jam puncak 5.656 kend/jam, dikalibrasi terhadap pengamatan lapangan (tundaan &lt; 10 menit) + uji kontrol dan uji sensitivitas +15%.<br/>"
         "<b>6. Skenario</b> – S0 eksisting, Tahap 1, S1 APILL adaptif, S2 U-turn layang; masing-masing 3 seed acak, jam puncak 60 "
-        "menit → waktu tempuh, tundaan, panjang antrean.<br/>"
+        "menit → tundaan per pergerakan, waktu tempuh, panjang antrean.<br/>"
         "<b>7. Visualisasi</b> – kamera bebas & preset (bukaan A, mulut Gerlong, bukaan B, flyover), grafik antrean real-time."),
         size=8.6)
     w, h = image(c, os.path.join(IMG, "3d_S0_bukaan_A.png"), 48, 420, w=500)
-    caption(c, "Tampilan 3D simulasi kondisi eksisting (S0) di bukaan A, menit ke-8 jam puncak: antrean arah turun 343 m.",
+    caption(c, "Tampilan 3D simulasi kondisi eksisting (S0) di bukaan A saat jam puncak: antrean arah turun akibat kendaraan putar balik.",
             48, 420 + h + 3, 548)
 
 
@@ -247,12 +247,12 @@ def page5(c):
     # bagan unsur
     cols = [
         ("INPUT", ["Geometri jalan (OSM, citra satelit, Street View, foto/video)", "Kelandaian SRTM 4,86%",
-                   "Volume & komposisi kendaraan (asumsi jam puncak)", "Perilaku pengemudi lokal"]),
+                   "Volume & komposisi kendaraan (jam puncak, dikalibrasi)", "Perilaku pengemudi lokal"]),
         ("MODEL SUMO", ["Jaringan jalan + median pagar + bukaan A/B", "Agen: motor, mobil, angkot, truk, bus",
                         "Pengendali: putar balik, ngetem, “maksa”", "APILL adaptif / flyover (per skenario)"]),
         ("SKENARIO", ["S0 Eksisting", "Tahap 1: larangan putar balik truk/bus + tertib ngetem",
                       "S1: APILL adaptif + lajur khusus belok kanan", "S2: U-turn layang"]),
-        ("OUTPUT", ["Waktu tempuh per pergerakan", "Tundaan rata-rata", "Panjang antrean per koridor",
+        ("OUTPUT", ["Tundaan per pergerakan", "Tundaan rata-rata", "Panjang antrean per koridor",
                     "Visual 3D + mode kemudi"]),
     ]
     x0, top, gap, bw, bh = 52, 598, 14, 113, 132
@@ -281,7 +281,7 @@ def page5(c):
     c.line(xr, Y(yb), xl, Y(yb))
     arrow(c, xl, Y(yb), xl, Y(top + bh + 1))
     box(c, x0, yb + 3, x0 + 4 * bw + 3 * gap, yb + 22,
-        "<b>Evaluasi → pilih solusi:</b> S1 sebagai solusi utama (Lembang → Gerlong −76%), S2 sebagai rencana jangka panjang.",
+        "<b>Evaluasi → pilih solusi:</b> Tahap 1 segera (−88%), S1 bila arus naik (tetap −84% pada arus +15%), S2 jangka panjang.",
         size=7.4, align=TA_CENTER)
 
 
@@ -290,14 +290,14 @@ def page6(c):
     x0, top = 72, 186
     w1, h1 = image(c, os.path.join(IMG, "denah_S1.png"), x0, top, w=205)
     w2, h2 = image(c, os.path.join(IMG, "denah_S2.png"), x0 + 230, top, w=205)
-    caption(c, "Denah solusi utama S1: median dibuka di mulut Gerlong, APILL 2 fase adaptif, lajur khusus belok kanan 60 m, "
+    caption(c, "Denah solusi lanjutan S1: median dibuka di mulut Gerlong, APILL 2 fase adaptif, lajur khusus belok kanan 60 m, "
             "bukaan A ditutup.", x0, top + h1 + 2, x0 + w1, size=6.8)
     caption(c, "Denah jangka panjang S2: U-turn layang, ramp dari lajur median dekat UPI, loop R 13 m, mendarat 70 m sebelum "
             "Gerlong.", x0 + 230, top + h2 + 2, x0 + 230 + w2, size=6.8)
     t2 = top + max(h1, h2) + 34
     w3, h3 = image(c, os.path.join(IMG, "3d_S1_mulut_gerlong.png"), 97, t2, w=410)
     caption(c, "Rancangan S1 di simulasi 3D: APILL di mulut Gerlong, kendaraan dari Lembang belok kanan pada fase khusus; "
-            "antrean arah turun hanya 37 m.", 97, t2 + h3 + 2, 507, size=6.8)
+            "antrean arah turun rata-rata 39 m.", 97, t2 + h3 + 2, 507, size=6.8)
 
 
 def build():

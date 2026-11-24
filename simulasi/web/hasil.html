@@ -28,25 +28,26 @@
 <main>
   <h1>Hasil Simulasi — Puteran Jl. Dr. Setiabudi × Gerlong</h1>
   <div class="sub">SUMO 1.28 · 60 menit jam puncak setelah pemanasan 10 menit · rata-rata ± simpangan baku antar seed acak ·
-    volume = asumsi jam puncak (PKJI 2023). <a href="index.html">← kembali ke simulasi 3D</a></div>
+    volume jam puncak dikalibrasi (5.656 kend/jam) agar tundaan kondisi sekarang sesuai pengamatan lapangan (&lt; 10 menit). <a href="index.html">← kembali ke simulasi 3D</a></div>
 
-  <h2>Pergerakan utama: dari Lembang ke Gerlong</h2>
+  <h2>Pergerakan utama: tundaan dari arah Lembang masuk Gerlong</h2>
   <div class="grid" id="kpi"></div>
 
   <h2>Indikator utama</h2>
   <div class="card"><table id="tMain"></table></div>
 
-  <h2>Waktu tempuh per pergerakan (detik) dan perubahan terhadap kondisi sekarang</h2>
+  <h2>Tundaan di simpang Gerlong per pergerakan (detik) dan perubahan terhadap kondisi sekarang</h2>
   <div class="card"><table id="tOD"></table>
     <div class="sub" style="margin-top:8px">▼ hijau = lebih cepat dari S0 · ▲ merah = lebih lambat dari S0</div></div>
 
   <div id="sensWrap" style="display:none">
-    <h2>Uji sensitivitas: kepadatan 80%</h2>
+    <h2>Uji sensitivitas: arus +15%</h2>
     <div class="card"><table id="tSens"></table>
-      <div class="sub" style="margin-top:8px">Memeriksa apakah kesimpulan tetap sama bila volume asumsi terlalu tinggi.</div></div>
+      <div class="sub" style="margin-top:8px">Memeriksa apakah kesimpulan tetap sama bila arus lebih padat dari hasil kalibrasi.</div></div>
   </div>
 
   <h2>Grafik</h2>
+  <div class="card"><img src="hasil/grafik_tundaan_pergerakan.png" alt="Tundaan per pergerakan"></div>
   <div class="card"><img src="hasil/grafik_waktu_tempuh.png" alt="Waktu tempuh per pergerakan"></div>
   <div class="card"><img src="hasil/grafik_tundaan.png" alt="Tundaan rata-rata"></div>
   <div class="card"><img src="hasil/grafik_antrean.png" alt="Panjang tersendat"></div>
@@ -63,9 +64,9 @@ let D;
 fetch('hasil/ringkasan.json').then(r => r.json()).then(d => {
   D = d;
   const sc = SC.filter(s => d[s[0]]);
-  const base = d.S0.od.SB_ger.tt[0];
+  const base = d.S0.od.SB_ger.loss[0];
   document.getElementById('kpi').innerHTML = sc.map(s => {
-    const v = d[s[0]].od.SB_ger.tt[0], ch = (v - base) / base * 100;
+    const v = d[s[0]].od.SB_ger.loss[0], ch = (v - base) / base * 100;
     return `<div class="kpi"><div class="l"><span class="sw" style="background:${s[2]}"></span>${s[1]}</div>
       <div class="v">${(v / 60).toFixed(1)} menit</div>
       <div class="l">${s[0] === 'S0' ? 'kondisi sekarang' : `<span class="${ch < 0 ? 'good' : 'bad'}">${ch < 0 ? '▼' : '▲'} ${Math.abs(ch).toFixed(0)}%</span> dibanding S0`}</div></div>`;
@@ -75,18 +76,18 @@ fetch('hasil/ringkasan.json').then(r => r.json()).then(d => {
     ['Kendaraan selesai dalam 1 jam', 'kendaraan_diukur']];
   document.getElementById('tMain').innerHTML = head('Indikator') + rows.map(([l, k]) => `<tr><td>${l}</td>${sc.map(s => `<td>${f(d[s[0]][k])}</td>`).join('')}</tr>`).join('');
   document.getElementById('tOD').innerHTML = head('Pergerakan') + OD.map(([k, l]) => {
-    const b = d.S0.od[k].tt[0];
+    const b = d.S0.od[k].loss[0];
     return `<tr><td>${l}</td>${sc.map(s => {
-      const v = d[s[0]].od[k].tt[0]; if (v == null) return '<td>–</td>';
+      const v = d[s[0]].od[k].loss[0]; if (v == null) return '<td>–</td>';
       if (s[0] === 'S0') return `<td>${Math.round(v)}</td>`;
       const ch = (v - b) / b * 100;
       return `<td>${Math.round(v)} <span class="${ch < 0 ? 'good' : 'bad'}">${ch < 0 ? '▼' : '▲'}${Math.abs(ch).toFixed(0)}%</span></td>`;
     }).join('')}</tr>`;
   }).join('');
-  const S = d._sensitivitas_80;
+  const S = d._sensitivitas_p15;
   if (S) {
     document.getElementById('sensWrap').style.display = 'block';
-    const r2 = [['Tundaan rata-rata (s)', 'delay'], ['Lembang → Gerlong (s)', 'lg'], ['Lurus turun (s)', 'sbt'], ['Lurus naik (s)', 'nbt']];
+    const r2 = [['Tundaan rata-rata semua (s)', 'delay'], ['Tundaan Lembang → Gerlong (s)', 'lg'], ['Tundaan lurus turun (s)', 'sbt'], ['Tundaan lurus naik (s)', 'nbt'], ['Antrean Gerlong (m)', 'qg']];
     document.getElementById('tSens').innerHTML = `<tr><th>Indikator</th>${sc.filter(s => S[s[0]]).map(s => `<th><span class="sw" style="background:${s[2]}"></span>${s[1]}</th>`).join('')}</tr>` +
       r2.map(([l, k]) => `<tr><td>${l}</td>${sc.filter(s => S[s[0]]).map(s => `<td>${f(S[s[0]][k])}</td>`).join('')}</tr>`).join('');
   }

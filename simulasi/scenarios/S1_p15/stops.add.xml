@@ -1,0 +1,15 @@
+<additional>
+  <busStop id="halte_GG" lane="NB_S_A_0" startPos="351.4" endPos="369.4" name="Halte Gegerkalong Girang" lines="angkot"/>
+  <busStop id="ngetem_GER" lane="GER_in_0" startPos="399.5" endPos="415.5" name="Ngetem mulut Gerlong" lines="angkot"/>
+  <tlLogic id="G" type="actuated" programID="lkm" offset="0">
+    <param key="max-gap" value="3.0"/>
+    <param key="detector-gap" value="2.0"/>
+    <param key="passing-time" value="1.9"/>
+    <phase duration="50" minDur="30" maxDur="70" state="GGrrgGGG" name="Fase 1: Setiabudi lurus + kiri ke/dari Gerlong"/>
+    <phase duration="3" minDur="3" maxDur="3" state="GGrrgyyy" name="kuning arah naik"/>
+    <phase duration="2" minDur="2" maxDur="2" state="GGrrgrrr" name="merah semua arah naik"/>
+    <phase duration="10" minDur="5" maxDur="14" state="GGGGgrrr" name="Fase 2: dari atas belok kanan ke Gerlong / putar balik"/>
+    <phase duration="3" minDur="3" maxDur="3" state="GGyygrrr" name="kuning belok kanan"/>
+    <phase duration="2" minDur="2" maxDur="2" state="GGrrgrrr" name="pengosongan"/>
+  </tlLogic>
+</additional>

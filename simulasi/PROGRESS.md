@@ -37,3 +37,14 @@ Catatan progres bertahap. Kalau sesi terputus, lanjutkan dari tahap pertama yang
   tools/plan.py -> results/gambar/denah_S0|S1|S2.png, gambar 3D di results/gambar/. Sensitivitas 80%: urutan sama (S1 Lembang->Gerlong -80%, S2 tundaan 33 s).
   Perbaikan akhir: server tahan error per-langkah; URL pakai 127.0.0.1 (localhost/IPv6 bisa menggantung di Windows).
 STATUS: SEMUA TAHAP SELESAI. Ide lanjutan: hitung volume lapangan (video diam) -> ganti VOLUMES di tools/make_scenario.py -> jalankan ulang batch.
+
+
+## Kalibrasi volume (23-11-2026)
+- Masukan pengguna: angka lama (tundaan Lembang → Gerlong ±27 menit) tidak realistis; di lapangan "macet biasa, < 10 menit".
+- Uji S0 pada 50/60/70/80/100% volume awal → tundaan Lembang → Gerlong 0,5 / 0,9 / 8,2 / 16 / 27 menit. Dipilih 70%
+  (`KALIBRASI = 0.70` di make_scenario.py, 5.656 kend/jam).
+- Semua skenario dijalankan ulang (3 seed) + sensitivitas +15% (`*_p15`, 2 seed) + uji kontrol `S0_lurus`.
+- Indikator utama diganti dari waktu tempuh ke **tundaan per pergerakan** (report.py, hasil.html, PDF).
+- Hasil: tundaan Lembang → Gerlong S0 449 s; Tahap 1 −88%, S1 −83%, S2 −88%. Pada +15%: S0 1002 s, Tahap 1 314 s (tidak stabil),
+  S1 161 s, S2 85 s. Rekomendasi: Tahap 1 segera → S1 bila arus naik → S2 jangka panjang.
+- PDF LKM-2 dibuat ulang (tools/isi_lkm.py). Hasil lama di results/arsip_volume_awal/.

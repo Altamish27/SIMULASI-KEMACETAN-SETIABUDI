@@ -1,6 +1,7 @@
 {
  "scenario": "S0",
  "scale": 1.0,
+ "kalibrasi": 0.7,
  "volumes": {
   "SB_total": 3600,
   "NB_total": 3800,
@@ -51,27 +52,27 @@
   [
    "SB_thru",
    "motor",
-   2232.0
+   1562.4
   ],
   [
    "SB_thru",
    "mobil",
-   972.0
+   680.4
   ],
   [
    "SB_thru",
    "angkot",
-   180.0
-  ],
-  [
-   "SB_thru",
-   "truk",
    126.0
   ],
   [
    "SB_thru",
+   "truk",
+   88.2
+  ],
+  [
+   "SB_thru",
    "bus",
-   90.0
+   63.0
   ],
   [
    "SB_ger",
@@ -136,27 +137,27 @@
   [
    "NB_thru",
    "motor",
-   2356.0
+   1649.2
   ],
   [
    "NB_thru",
    "mobil",
-   1026.0
+   718.2
   ],
   [
    "NB_thru",
    "angkot",
-   190.0
-  ],
-  [
-   "NB_thru",
-   "truk",
    133.0
   ],
   [
    "NB_thru",
+   "truk",
+   93.1
+  ],
+  [
+   "NB_thru",
    "bus",
-   95.0
+   66.5
   ],
   [
    "NB_ger",

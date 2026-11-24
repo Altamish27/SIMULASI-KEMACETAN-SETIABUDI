@@ -1,256 +1,279 @@
-Warning: Vehicle 'NB_thru__motor.11' performs emergency braking on lane ':A_6_1' with decel=9.00, wished=6.00, severity=1.00, time=73.50.
-Warning: Vehicle 'NB_thru__motor.31' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=93.00.
-Warning: Vehicle 'SB_ger__motor.0' performs emergency braking on lane 'SB_G_A_1' with decel=9.00, wished=6.00, severity=1.00, time=107.00.
-Warning: Vehicle 'SB_thru__motor.15' performs emergency braking on lane 'SB_G_A_1' with decel=9.00, wished=6.00, severity=1.00, time=107.50.
-Warning: Vehicle 'NB_thru__motor.53' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=121.00.
-Warning: Vehicle 'NB_thru__motor.54'; collision with vehicle 'NB_thru__motor.53', lane='NB_S_A_1', gap=-0.11, latGap=-0.01, time=121.00, stage=move.
-Warning: Vehicle 'NB_thru__motor.54' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=121.50.
-Warning: Vehicle 'NB_thru__motor.25' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=123.00.
-Warning: Vehicle 'SB_thru__angkot.5' performs emergency braking on lane ':G_0_0' with decel=9.00, wished=4.00, severity=1.00, time=127.50.
-Warning: Vehicle 'NB_thru__motor.61' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=129.50.
-Warning: Vehicle 'SB_thru__motor.40' performs emergency braking on lane 'SB_G_A_1' with decel=9.00, wished=6.00, severity=1.00, time=148.00.
-Warning: Vehicle 'SB_thru__motor.46' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=6.00, severity=1.00, time=173.00.
-Warning: Vehicle 'SB_thru__motor.62' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=196.50.
-Warning: Vehicle 'SB_thru__motor.56' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=197.00.
-Warning: Vehicle 'NB_thru__motor.63' performs emergency braking on lane 'NB_A_G_1' with decel=9.00, wished=6.00, severity=1.00, time=204.50.
-Warning: Vehicle 'NB_thru__motor.103' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=206.50.
-Warning: Vehicle 'NB_thru__motor.62' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=211.50.
-Warning: Vehicle 'NB_thru__motor.80' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=233.50.
-Warning: Vehicle 'NB_thru__motor.125' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=235.00.
-Warning: Vehicle 'NB_kah__motor.1' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=285.50.
-Warning: Vehicle 'GER_north__motor.5' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=296.00.
-Warning: Vehicle 'GER_north__motor.6' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=296.00.
-Warning: Vehicle 'NB_thru__motor.91' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=296.50.
-Warning: Vehicle 'NB_thru__motor.104' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=331.50.
-Warning: Vehicle 'SB_thru__mobil.55' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=336.50.
-Warning: Vehicle 'SB_thru__motor.111' performs emergency braking on lane 'SB_A_S_1' with decel=9.00, wished=6.00, severity=1.00, time=347.00.
-Warning: Vehicle 'NB_thru__motor.119' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=352.00.
-Warning: Vehicle 'SB_thru__motor.134' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=356.00.
-Warning: Vehicle 'NB_thru__motor.110' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=386.00.
-Warning: Vehicle 'SB_thru__motor.152' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=392.00.
-Warning: Vehicle 'SB_thru__motor.160' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=393.50.
-Warning: Vehicle 'NB_thru__mobil.96' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=4.50, severity=1.00, time=399.00.
-Warning: Vehicle 'SB_thru__truk.10' performs emergency braking on lane 'SB_N_B_0' with decel=7.00, wished=3.80, severity=1.00, time=431.00.
-Warning: Vehicle 'SB_thru__motor.161' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=6.00, severity=1.00, time=433.50.
-Warning: Vehicle 'SB_thru__motor.242' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=490.50.
-Warning: Vehicle 'NB_ger__motor.21' performs emergency braking on lane 'NB_A_G_1' with decel=9.00, wished=6.00, severity=1.00, time=506.50.
-Warning: Vehicle 'NB_thru__motor.203' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=511.50.
-Warning: Vehicle 'NB_thru__angkot.19' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=4.00, severity=1.00, time=552.50.
-Warning: Vehicle 'NB_thru__motor.191' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=563.00.
-Warning: Vehicle 'SB_thru__motor.208' performs emergency braking on lane 'SB_A_S_0' with decel=9.00, wished=6.00, severity=1.00, time=565.50.
-Warning: Vehicle 'SB_thru__motor.216' performs emergency braking on lane 'SB_A_S_1' with decel=9.00, wished=6.00, severity=1.00, time=567.00.
-Warning: Vehicle 'SB_thru__mobil.106' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=596.00.
-Warning: Vehicle 'SB_thru__motor.219' performs emergency braking on lane 'SB_A_S_1' with decel=9.00, wished=6.00, severity=1.00, time=598.50.
-Warning: Vehicle 'NB_thru__motor.258' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=628.50.
-Warning: Vehicle 'NB_thru__motor.263' performs emergency braking on lane ':B_2_1' with decel=9.00, wished=6.00, severity=1.00, time=635.00.
-Warning: Vehicle 'NB_thru__mobil.115' performs emergency braking on lane ':B_2_1' with decel=9.00, wished=4.50, severity=1.00, time=641.00.
-Warning: Vehicle 'SB_kah__motor.2' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=672.00.
-Warning: Vehicle 'NB_thru__motor.273' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=674.50.
-Warning: Vehicle 'NB_ger__motor.26' performs emergency braking on lane ':G_3_0' with decel=9.00, wished=6.00, severity=1.00, time=688.00.
-Warning: Vehicle 'NB_thru__motor.334' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=745.00.
-Warning: Vehicle 'SB_thru__mobil.120' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=4.50, severity=1.00, time=821.50.
-Warning: Vehicle 'NB_uturn__motor.20' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=840.50.
-Warning: Vehicle 'NB_thru__motor.364' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=944.00.
-Warning: Vehicle 'SB_thru__motor.480' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=956.00.
-Warning: Vehicle 'SB_thru__motor.481' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=957.50.
-Warning: Vehicle 'SB_thru__motor.496' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=986.00.
-Warning: Vehicle 'NB_thru__motor.370' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=1007.50.
-Warning: Vehicle 'NB_thru__motor.366' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=1015.00.
-Warning: Vehicle 'GER_south__motor.34' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1030.00.
-Warning: Vehicle 'NB_thru__motor.425' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1096.50.
-Warning: Vehicle 'NB_thru__motor.472' performs emergency braking on lane 'NB_A_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1116.00.
-Warning: Vehicle 'NB_thru__mobil.209' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=1158.00.
-Warning: Vehicle 'NB_thru__motor.472' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=1196.00.
-Warning: Vehicle 'GER_south__motor.42' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1329.50.
-Warning: Vehicle 'SB_thru__mobil.224' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=1337.50.
-Warning: Vehicle 'NB_thru__motor.597' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=1372.00.
-Warning: Vehicle 'SB_ger__motor.23'; side collision with vehicle 'SB_ger__mobil.14', lane='SB_G_A_1', gap=-0.67, latGap=-0.08, time=1451.00, stage=laneChange.
-Warning: Vehicle 'NB_thru__motor.670' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1543.00.
-Warning: Vehicle 'NB_ger__mobil.37' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=4.50, severity=1.00, time=1556.00.
-Warning: Vehicle 'NB_thru__motor.685' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=1567.00.
-Warning: Vehicle 'SB_thru__motor.614' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1608.50.
-Warning: Vehicle 'SB_thru__mobil.277' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=4.50, severity=1.00, time=1735.00.
-Warning: Vehicle 'NB_thru__motor.780' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1804.50.
-Warning: Vehicle 'SB_thru__motor.733' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=6.00, severity=1.00, time=1832.00.
-Warning: Vehicle 'NB_thru__motor.823' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1920.50.
-Warning: Vehicle 'NB_kah__motor.6' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=1922.50.
-Warning: Vehicle 'NB_ger__motor.81' performs emergency braking on lane 'NB_A_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1929.50.
-Warning: Vehicle 'NB_thru__motor.952' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=1982.50.
-Warning: Vehicle 'SB_thru__motor.787'; collision with vehicle 'NB_uturn__motor.40', lane='SB_B_G_0', gap=-2.63, latGap=-0.75, time=2014.50, stage=move.
-Warning: Vehicle 'SB_thru__mobil.341' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=4.50, severity=1.00, time=2039.50.
-Warning: Vehicle 'NB_thru__motor.935' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2090.00.
-Warning: Vehicle 'GER_south__motor.64' performs emergency braking on lane 'GER_in_0' with decel=9.00, wished=6.00, severity=1.00, time=2112.00.
-Warning: Vehicle 'NB_thru__motor.935' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2115.00.
-Warning: Vehicle 'NB_kah__motor.8' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=2153.00.
-Warning: Vehicle 'GER_south__motor.70' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2159.00.
-Warning: Vehicle 'NB_thru__mobil.427' performs emergency braking on lane ':B_2_1' with decel=9.00, wished=4.50, severity=1.00, time=2163.00.
-Warning: Vehicle 'NB_thru__mobil.431' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=2175.50.
-Warning: Vehicle 'NB_thru__motor.1043' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=2175.50.
-Warning: Vehicle 'NB_thru__motor.938' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2187.00.
-Warning: Vehicle 'GER_south__motor.75' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=2206.50.
-Warning: Vehicle 'NB_thru__motor.973' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2234.50.
-Warning: Vehicle 'NB_thru__motor.986' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2239.00.
-Warning: Vehicle 'NB_thru__motor.1030' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2354.50.
-Warning: Vehicle 'NB_uturn__motor.51' performs emergency braking on lane 'NB_A_G_1' with decel=9.00, wished=6.00, severity=1.00, time=2373.00.
-Warning: Vehicle 'NB_thru__mobil.473' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=2378.00.
-Warning: Vehicle 'SB_thru__mobil.408' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=2419.50.
-Warning: Vehicle 'NB_thru__motor.1126' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2426.00.
-Warning: Vehicle 'NB_thru__motor.1147' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2455.00.
-Warning: Vehicle 'SB_thru__mobil.412' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=2459.00.
-Warning: Vehicle 'SB_thru__motor.993' performs emergency braking on lane 'SB_A_S_1' with decel=9.00, wished=6.00, severity=1.00, time=2537.00.
-Warning: Vehicle 'NB_thru__motor.1089' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=2549.50.
-Warning: Vehicle 'NB_thru__motor.1087' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=2550.00.
-Warning: Vehicle 'GER_north__motor.100' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=2567.00.
-Warning: Vehicle 'NB_thru__motor.1114' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2585.00.
-Warning: Vehicle 'NB_kah__motor.11' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=2588.00.
-Warning: Vehicle 'GER_north__mobil.49' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=4.50, severity=1.00, time=2616.00.
-Warning: Vehicle 'NB_thru__motor.1156' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2705.00.
-Warning: Vehicle 'NB_thru__motor.1282' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2713.00.
-Warning: Vehicle 'SB_thru__motor.1092' performs emergency braking on lane 'SB_A_S_0' with decel=9.00, wished=6.00, severity=1.00, time=2732.50.
-Warning: Vehicle 'NB_thru__motor.1194' performs emergency braking on lane ':G_4_1' with decel=9.00, wished=6.00, severity=1.00, time=2749.50.
-Warning: Vehicle 'KAH_south__motor.21' performs emergency braking on lane 'SB_A_S_1' with decel=9.00, wished=6.00, severity=1.00, time=2803.50.
-Warning: Vehicle 'GER_north__motor.110' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=2836.00.
-Warning: Vehicle 'NB_thru__motor.1214' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2864.50.
-Warning: Vehicle 'SB_thru__motor.1153' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=2909.50.
-Warning: Vehicle 'NB_kah__motor.13' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2918.00.
-Warning: Vehicle 'NB_thru__motor.1344' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=3043.50.
-Warning: Vehicle 'NB_thru__motor.1440' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3055.50.
-Warning: Vehicle 'SB_thru__motor.1223' performs emergency braking on lane 'SB_A_S_0' with decel=9.00, wished=6.00, severity=1.00, time=3058.00.
-Warning: Vehicle 'SB_thru__angkot.125' performs emergency braking on lane 'SB_A_S_1' with decel=9.00, wished=4.00, severity=1.00, time=3075.00.
-Warning: Vehicle 'NB_thru__motor.1468' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3092.00.
-Warning: Vehicle 'NB_thru__mobil.610' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=3133.50.
-Warning: Vehicle 'NB_thru__motor.1443' performs emergency braking on lane ':G_4_1' with decel=9.00, wished=6.00, severity=1.00, time=3160.50.
-Warning: Vehicle 'NB_thru__motor.1430' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=3173.50.
-Warning: Vehicle 'NB_thru__motor.1452' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=3207.00.
-Warning: Vehicle 'SB_thru__motor.1334' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=6.00, severity=1.00, time=3280.50.
-Warning: Vehicle 'SB_thru__motor.1358' performs emergency braking on lane 'SB_A_S_0' with decel=9.00, wished=6.00, severity=1.00, time=3338.50.
-Warning: Vehicle 'SB_thru__motor.1383' performs emergency braking on lane 'SB_A_S_0' with decel=9.00, wished=6.00, severity=1.00, time=3355.00.
-Warning: Teleporting vehicle 'SB_ger__mobil.46'; waited too long (jam), lane='SB_N_B_1', time=3359.50.
-Warning: Vehicle 'SB_ger__mobil.46' ends teleporting on edge 'SB_B_G', time=3361.00.
-Warning: Vehicle 'NB_thru__motor.1556' performs emergency braking on lane ':G_4_0' with decel=9.00, wished=6.00, severity=1.00, time=3377.00.
-Warning: Vehicle 'NB_thru__motor.1648' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3400.50.
-Warning: Vehicle 'NB_thru__motor.1559' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=3439.50.
-Warning: Vehicle 'NB_ger__motor.164' performs emergency braking on lane 'NB_A_G_0' with decel=9.00, wished=6.00, severity=1.00, time=3448.00.
-Warning: Vehicle 'NB_kah__motor.14' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=3472.00.
-Warning: Vehicle 'GER_south__motor.120' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3491.00.
-Warning: Vehicle 'SB_thru__motor.1513' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3703.50.
-Warning: Vehicle 'NB_thru__motor.1724' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=3804.50.
-Warning: Vehicle 'NB_thru__motor.1727' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=3841.50.
-Warning: Vehicle 'NB_thru__motor.1746' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=3843.50.
-Warning: Vehicle 'NB_thru__motor.1781' performs emergency braking on lane 'NB_A_G_1' with decel=9.00, wished=6.00, severity=1.00, time=3890.00.
-Warning: Vehicle 'GER_north__motor.187' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=3984.50.
-Warning: Vehicle 'NB_thru__motor.1811' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=4045.50.
-Warning: Vehicle 'NB_thru__angkot.145' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=4.00, severity=1.00, time=4046.50.
-Warning: Vehicle 'GER_north__mobil.86' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=4.50, severity=1.00, time=4052.00.
-Warning: Vehicle 'SB_thru__motor.1681'; collision with vehicle 'GER_south__motor.137', lane='SB_B_G_0', gap=-2.66, latGap=-0.70, time=4058.50, stage=move.
-Warning: Vehicle 'SB_thru__motor.1681' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=4059.00.
-Warning: Vehicle 'SB_uturn__mobil.7' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=4076.00.
-Warning: Vehicle 'NB_thru__motor.1811' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=4081.50.
-Warning: Vehicle 'GER_south__motor.144' performs emergency braking on lane 'GER_in_0' with decel=9.00, wished=6.00, severity=1.00, time=4152.50.
+Warning: Vehicle 'SB_ger__motor.1' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=85.00.
+Warning: Vehicle 'SB_thru__motor.13' performs emergency braking on lane 'SB_G_A_1' with decel=9.00, wished=6.00, severity=1.00, time=92.50.
+Warning: Vehicle 'NB_thru__motor.34' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=127.00.
+Warning: Vehicle 'NB_thru__motor.28' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=139.00.
+Warning: Vehicle 'NB_kah__mobil.1' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=4.50, severity=1.00, time=216.00.
+Warning: Vehicle 'SB_thru__truk.7' performs emergency braking on lane 'SB_N_B_0' with decel=7.00, wished=3.80, severity=1.00, time=314.00.
+Warning: Vehicle 'NB_thru__motor.118' performs emergency braking on lane 'NB_A_G_0' with decel=9.00, wished=6.00, severity=1.00, time=348.50.
+Warning: Vehicle 'NB_thru__motor.123' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=359.50.
+Warning: Vehicle 'GER_north__motor.16' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=405.00.
+Warning: Vehicle 'NB_thru__motor.127' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=410.00.
+Warning: Vehicle 'GER_south__truk.0' performs emergency braking on lane 'SB_G_A_0' with decel=7.00, wished=3.80, severity=1.00, time=412.00.
+Warning: Vehicle 'NB_thru__motor.147' performs emergency braking on lane 'NB_A_G_0' with decel=9.00, wished=6.00, severity=1.00, time=433.00.
+Warning: Vehicle 'SB_thru__motor.147' performs emergency braking on lane 'SB_G_A_1' with decel=9.00, wished=6.00, severity=1.00, time=486.50.
+Warning: Vehicle 'NB_thru__motor.227' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=617.50.
+Warning: Vehicle 'NB_thru__motor.235' performs emergency braking on lane ':G_4_0' with decel=9.00, wished=6.00, severity=1.00, time=621.00.
+Warning: Vehicle 'SB_thru__mobil.82' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=4.50, severity=1.00, time=623.00.
+Warning: Vehicle 'SB_thru__motor.212' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=664.50.
+Warning: Vehicle 'NB_thru__mobil.89' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=679.50.
+Warning: Vehicle 'SB_thru__bus.2' performs emergency braking on lane 'SB_N_B_0' with decel=7.00, wished=3.50, severity=1.00, time=709.00.
+Warning: Vehicle 'SB_thru__motor.226' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=709.50.
+Warning: Vehicle 'SB_thru__motor.250' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=781.00.
+Warning: Vehicle 'NB_ger__motor.36' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=781.00.
+Warning: Vehicle 'SB_thru__motor.262' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=787.50.
+Warning: Vehicle 'NB_thru__motor.287' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=802.00.
+Warning: Vehicle 'SB_thru__mobil.104' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=815.00.
+Warning: Vehicle 'SB_thru__motor.281' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=843.50.
+Warning: Vehicle 'NB_thru__mobil.133' performs emergency braking on lane 'NB_A_G_0' with decel=9.00, wished=4.50, severity=1.00, time=850.50.
+Warning: Vehicle 'SB_uturn__motor.9' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=859.00.
+Warning: Vehicle 'SB_thru__motor.310' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=918.50.
+Warning: Vehicle 'NB_thru__motor.374' performs emergency braking on lane ':A_6_1' with decel=9.00, wished=6.00, severity=1.00, time=947.00.
+Warning: Vehicle 'NB_thru__mobil.153' performs emergency braking on lane ':B_2_1' with decel=9.00, wished=4.50, severity=1.00, time=975.00.
+Warning: Vehicle 'SB_uturn__motor.8' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=978.00.
+Warning: Vehicle 'NB_uturn__motor.22' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1001.00.
+Warning: Vehicle 'SB_thru__motor.361' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=1064.50.
+Warning: Vehicle 'NB_thru__motor.414' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=1066.00.
+Warning: Vehicle 'SB_ger__motor.43' performs emergency braking on lane ':G_3_0' with decel=9.00, wished=6.00, severity=1.00, time=1080.50.
+Warning: Vehicle 'NB_thru__motor.415' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=1099.00.
+Warning: Vehicle 'NB_thru__motor.450' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=1113.50.
+Warning: Vehicle 'SB_thru__motor.372' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=6.00, severity=1.00, time=1119.50.
+Warning: Vehicle 'SB_thru__motor.384' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1121.50.
+Warning: Vehicle 'SB_ger__motor.50' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=1127.00.
+Warning: Vehicle 'SB_kah__motor.6' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1137.00.
+Warning: Vehicle 'GER_south__motor.34' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1143.00.
+Warning: Vehicle 'SB_thru__truk.29' performs emergency braking on lane 'SB_N_B_0' with decel=7.00, wished=3.80, severity=1.00, time=1147.00.
+Warning: Vehicle 'SB_thru__motor.397' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=1159.00.
+Warning: Vehicle 'NB_thru__motor.475' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=1188.50.
+Warning: Vehicle 'SB_thru__motor.420' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1235.50.
+Warning: Vehicle 'SB_thru__motor.420'; collision with vehicle 'SB_thru__motor.416', lane='SB_B_G_0', gap=-1.42, latGap=-0.02, time=1235.50, stage=move.
+Warning: Vehicle 'NB_thru__motor.508' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1320.00.
+Warning: Vehicle 'NB_thru__motor.552' performs emergency braking on lane ':A_6_0' with decel=9.00, wished=6.00, severity=1.00, time=1423.50.
+Warning: Vehicle 'NB_thru__mobil.238' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=1460.00.
+Warning: Vehicle 'GER_north__motor.72' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=1466.50.
+Warning: Vehicle 'NB_thru__motor.598' performs emergency braking on lane ':A_6_0' with decel=9.00, wished=6.00, severity=1.00, time=1551.50.
+Warning: Vehicle 'NB_thru__angkot.41' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=4.00, severity=1.00, time=1564.50.
+Warning: Vehicle 'NB_thru__motor.619' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=1588.00.
+Warning: Vehicle 'NB_thru__motor.637' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=1611.50.
+Warning: Vehicle 'SB_thru__motor.569' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1612.00.
+Warning: Vehicle 'NB_uturn__motor.32' performs emergency braking on lane ':G_4_1' with decel=9.00, wished=6.00, severity=1.00, time=1630.00.
+Warning: Vehicle 'NB_thru__mobil.263' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=4.50, severity=1.00, time=1660.00.
+Warning: Vehicle 'SB_thru__motor.589' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1683.00.
+Warning: Vehicle 'SB_thru__motor.590' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1696.50.
+Warning: Vehicle 'NB_thru__motor.669' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=1711.00.
+Warning: Vehicle 'NB_thru__motor.649' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1731.00.
+Warning: Vehicle 'NB_ger__motor.80' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=1755.50.
+Warning: Vehicle 'NB_ger__motor.80'; collision with vehicle 'NB_thru__motor.667', lane='NB_S_A_0', gap=-0.19, latGap=-0.10, time=1755.50, stage=move.
+Warning: Vehicle 'NB_thru__motor.670' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=1806.50.
+Warning: Vehicle 'NB_uturn__motor.40' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1814.50.
+Warning: Vehicle 'SB_ger__motor.82' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=1816.50.
+Warning: Vehicle 'SB_thru__motor.633' performs emergency braking on lane 'SB_B_G_1' with decel=9.00, wished=6.00, severity=1.00, time=1817.00.
+Warning: Vehicle 'NB_thru__mobil.306' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=4.50, severity=1.00, time=1844.50.
+Warning: Vehicle 'SB_thru__mobil.247' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=4.50, severity=1.00, time=1852.00.
+Warning: Vehicle 'SB_thru__motor.650' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=1852.50.
+Warning: Vehicle 'SB_thru__motor.662' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1873.50.
+Warning: Vehicle 'GER_north__motor.88' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=1874.50.
+Warning: Vehicle 'SB_thru__motor.660' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=1875.50.
+Warning: Vehicle 'SB_thru__mobil.263' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=1904.50.
+Warning: Vehicle 'GER_south__motor.57' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1919.00.
+Warning: Vehicle 'NB_thru__motor.700' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=1926.00.
+Warning: Vehicle 'NB_thru__motor.766' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=1963.50.
+Warning: Vehicle 'SB_thru__motor.689' performs emergency braking on lane 'SB_A_S_0' with decel=9.00, wished=6.00, severity=1.00, time=1983.50.
+Warning: Vehicle 'GER_north__motor.96' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2032.50.
+Warning: Vehicle 'SB_thru__motor.735' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2033.50.
+Warning: Vehicle 'GER_north__motor.103' performs emergency braking on lane ':B_2_1' with decel=9.00, wished=6.00, severity=1.00, time=2070.00.
+Warning: Vehicle 'NB_thru__motor.826' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2091.50.
+Warning: Vehicle 'SB_thru__motor.718' performs emergency braking on lane 'SB_A_S_1' with decel=9.00, wished=6.00, severity=1.00, time=2108.50.
+Warning: Vehicle 'NB_thru__motor.801' performs emergency braking on lane 'NB_A_G_1' with decel=9.00, wished=6.00, severity=1.00, time=2109.50.
+Warning: Vehicle 'SB_thru__mobil.288' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=4.50, severity=1.00, time=2110.50.
+Warning: Vehicle 'NB_thru__motor.784' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=2115.00.
+Warning: Vehicle 'NB_thru__motor.777' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=2141.00.
+Warning: Vehicle 'NB_thru__motor.786' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2143.50.
+Warning: Vehicle 'NB_kah__motor.9' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=2203.50.
+Warning: Vehicle 'SB_thru__motor.843' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=2306.50.
+Warning: Vehicle 'NB_thru__motor.936' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=2331.00.
+Warning: Vehicle 'SB_thru__motor.880' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=2398.50.
+Warning: Vehicle 'NB_thru__motor.914' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=2407.50.
+Warning: Vehicle 'SB_thru__motor.910' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=2456.00.
+Warning: Vehicle 'NB_kah__motor.10' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=2521.00.
+Warning: Vehicle 'GER_north__motor.115' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=2548.50.
+Warning: Vehicle 'SB_thru__motor.877' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=2551.00.
+Warning: Vehicle 'NB_thru__motor.966' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2578.50.
+Warning: Vehicle 'NB_thru__motor.992' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2586.00.
+Warning: Vehicle 'GER_north__motor.117' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2602.50.
+Warning: Vehicle 'GER_south__motor.76' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2616.50.
+Warning: Vehicle 'GER_north__motor.116' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2626.00.
+Warning: Vehicle 'NB_thru__motor.1056' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2628.00.
+Warning: Vehicle 'GER_north__motor.125' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=2630.00.
+Warning: Vehicle 'NB_thru__motor.1085' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2705.00.
+Warning: Vehicle 'NB_ger__mobil.54' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=4.50, severity=1.00, time=2771.00.
+Warning: Vehicle 'GER_south__motor.78' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=2792.50.
+Warning: Vehicle 'NB_thru__motor.1083' performs emergency braking on lane ':G_4_0' with decel=9.00, wished=6.00, severity=1.00, time=2824.50.
+Warning: Vehicle 'NB_thru__motor.1083' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2856.00.
+Warning: Vehicle 'NB_thru__motor.1134' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=2875.00.
+Warning: Vehicle 'NB_thru__motor.1135' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=2881.00.
+Warning: Vehicle 'GER_south__motor.84' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=2885.50.
+Warning: Vehicle 'NB_thru__motor.1118' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=2923.50.
+Warning: Vehicle 'SB_thru__motor.1018' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=2934.50.
+Warning: Vehicle 'GER_south__motor.90' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2966.50.
+Warning: Vehicle 'NB_thru__motor.1132' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=2967.50.
+Warning: Vehicle 'NB_thru__motor.1198'; collision with vehicle 'NB_thru__motor.1197', lane='NB_S_A_1', gap=-0.04, latGap=-0.30, time=3024.50, stage=move.
+Warning: Vehicle 'NB_thru__motor.1198' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3025.00.
+Warning: Vehicle 'NB_thru__motor.1200' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3030.00.
+Warning: Vehicle 'NB_ger__motor.133' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=3050.00.
+Warning: Vehicle 'NB_thru__motor.1174' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3056.50.
+Warning: Vehicle 'SB_thru__motor.1058' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=6.00, severity=1.00, time=3073.50.
+Warning: Vehicle 'NB_thru__motor.1215' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3080.00.
+Warning: Vehicle 'NB_thru__motor.1186' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3116.50.
+Warning: Vehicle 'SB_thru__motor.1152' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3168.50.
+Warning: Vehicle 'NB_thru__motor.1275' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3245.50.
+Warning: Vehicle 'SB_thru__motor.1198' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3273.00.
+Warning: Vehicle 'GER_north__mobil.69' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=4.50, severity=1.00, time=3294.00.
+Warning: Vehicle 'NB_thru__mobil.578' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=4.50, severity=1.00, time=3301.00.
+Warning: Vehicle 'SB_thru__mobil.488' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=4.50, severity=1.00, time=3301.00.
+Warning: Vehicle 'SB_thru__motor.1212' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3307.00.
+Warning: Vehicle 'GER_north__motor.158' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3314.50.
+Warning: Vehicle 'NB_thru__motor.1304' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3358.50.
+Warning: Vehicle 'NB_thru__motor.1302' performs emergency braking on lane ':A_6_0' with decel=9.00, wished=6.00, severity=1.00, time=3361.50.
+Warning: Vehicle 'NB_thru__motor.1316' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3361.50.
+Warning: Vehicle 'SB_ger__motor.153' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3380.50.
+Warning: Vehicle 'NB_thru__motor.1322' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=3393.50.
+Warning: Vehicle 'NB_thru__motor.1313' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3394.00.
+Warning: Vehicle 'SB_thru__motor.1254' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3410.50.
+Warning: Vehicle 'NB_thru__motor.1351' performs emergency braking on lane 'NB_A_G_1' with decel=9.00, wished=6.00, severity=1.00, time=3446.00.
+Warning: Vehicle 'NB_thru__motor.1332' performs emergency braking on lane 'NB_B_N_0' with decel=9.00, wished=6.00, severity=1.00, time=3452.00.
+Warning: Vehicle 'SB_thru__motor.1281' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3481.00.
+Warning: Vehicle 'NB_kah__motor.14' performs emergency braking on lane ':A_8_0' with decel=9.00, wished=6.00, severity=1.00, time=3643.50.
+Warning: Vehicle 'SB_thru__motor.1349' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3671.50.
+Warning: Vehicle 'SB_thru__motor.1351' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3682.00.
+Warning: Vehicle 'NB_thru__motor.1445' performs emergency braking on lane 'NB_A_G_1' with decel=9.00, wished=6.00, severity=1.00, time=3682.50.
+Warning: Vehicle 'GER_north__motor.182' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=3708.50.
+Warning: Vehicle 'NB_thru__motor.1441' performs emergency braking on lane 'NB_B_N_1' with decel=9.00, wished=6.00, severity=1.00, time=3725.00.
+Warning: Vehicle 'SB_uturn__motor.35' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3750.00.
+Warning: Vehicle 'NB_thru__motor.1481' performs emergency braking on lane ':A_6_0' with decel=9.00, wished=6.00, severity=1.00, time=3775.50.
+Warning: Vehicle 'NB_thru__motor.1501' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=6.00, severity=1.00, time=3818.50.
+Warning: Vehicle 'NB_ger__angkot.17' performs emergency braking on lane 'NB_S_A_0' with decel=9.00, wished=4.00, severity=1.00, time=3882.50.
+Warning: Vehicle 'NB_thru__motor.1541' performs emergency braking on lane 'NB_A_G_0' with decel=9.00, wished=6.00, severity=1.00, time=3925.50.
+Warning: Vehicle 'NB_thru__motor.1541'; collision with vehicle 'NB_thru__motor.1539', lane='NB_A_G_0', gap=-0.24, latGap=-0.03, time=3925.50, stage=move.
+Warning: Vehicle 'GER_north__motor.190' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=3979.00.
+Warning: Vehicle 'NB_thru__motor.1554' performs emergency braking on lane 'NB_G_B_1' with decel=9.00, wished=6.00, severity=1.00, time=4008.00.
+Warning: Vehicle 'NB_thru__motor.1602' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=4010.50.
+Warning: Vehicle 'NB_uturn__motor.76' performs emergency braking on lane 'SB_B_G_0' with decel=9.00, wished=6.00, severity=1.00, time=4020.50.
+Warning: Vehicle 'SB_thru__motor.1470' performs emergency braking on lane 'SB_N_B_1' with decel=9.00, wished=6.00, severity=1.00, time=4029.50.
+Warning: Vehicle 'GER_north__angkot.20' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=4.00, severity=1.00, time=4049.00.
+Warning: Vehicle 'NB_thru__motor.1579' performs emergency braking on lane 'NB_G_B_0' with decel=9.00, wished=6.00, severity=1.00, time=4076.50.
+Warning: Vehicle 'SB_thru__motor.1498' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=4103.00.
+Warning: Teleporting vehicle 'SB_uturn__mobil.12'; waited too long (jam), lane='SB_B_G_1', time=4122.50.
+Warning: Vehicle 'SB_thru__motor.1516' performs emergency braking on lane 'SB_N_B_0' with decel=9.00, wished=6.00, severity=1.00, time=4143.50.
+Warning: Vehicle 'SB_uturn__mobil.12' ends teleporting on edge 'NB_A_G', time=4150.50.
+Warning: Vehicle 'SB_thru__motor.1439' performs emergency braking on lane 'SB_G_A_0' with decel=9.00, wished=6.00, severity=1.00, time=4151.00.
+Warning: Vehicle 'GER_north__motor.198' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=4167.50.
+Warning: Vehicle 'NB_thru__motor.1633' performs emergency braking on lane ':G_4_0' with decel=9.00, wished=6.00, severity=1.00, time=4179.50.
+Warning: Vehicle 'GER_north__motor.196' performs emergency braking on lane ':G_2_0' with decel=9.00, wished=6.00, severity=1.00, time=4181.50.
+Warning: Vehicle 'NB_thru__motor.1672' performs emergency braking on lane 'NB_S_A_1' with decel=9.00, wished=6.00, severity=1.00, time=4188.00.
 Warning! pyarrow is installed with version 25.0.0 which might be incompatible with libsumo which is compiled against libarrow2300.
  Try to uninstall pyarrow or install a matching pyarrow version, if you encounter problems.
 {
  "scenario": "S0",
  "od": {
+  "KAH_south": {
+   "label": "KAH_south",
+   "n": 32,
+   "waktu_tempuh_rata_s": 74.1,
+   "waktu_tempuh_p85_s": 90.2,
+   "tundaan_rata_s": 12.8
+  },
   "SB_thru": {
    "label": "Dari atas → lurus ke bawah",
-   "n": 2365,
-   "waktu_tempuh_rata_s": 738.4,
-   "waktu_tempuh_p85_s": 1015.3,
-   "tundaan_rata_s": 644.9
-  },
-  "SB_kah": {
-   "label": "SB_kah",
-   "n": 41,
-   "waktu_tempuh_rata_s": 327.0,
-   "waktu_tempuh_p85_s": 390.2,
-   "tundaan_rata_s": 237.7
-  },
-  "NB_thru": {
-   "label": "Dari bawah → lurus ke atas",
-   "n": 2596,
-   "waktu_tempuh_rata_s": 643.4,
-   "waktu_tempuh_p85_s": 865.3,
-   "tundaan_rata_s": 549.6
+   "n": 2147,
+   "waktu_tempuh_rata_s": 194.6,
+   "waktu_tempuh_p85_s": 269.6,
+   "tundaan_rata_s": 101.8
   },
   "NB_ger": {
    "label": "Dari bawah → Gerlong",
-   "n": 255,
-   "waktu_tempuh_rata_s": 519.3,
-   "waktu_tempuh_p85_s": 674.7,
-   "tundaan_rata_s": 434.1
+   "n": 234,
+   "waktu_tempuh_rata_s": 159.8,
+   "waktu_tempuh_p85_s": 210.2,
+   "tundaan_rata_s": 72.0
   },
-  "NB_uturn": {
-   "label": "Dari bawah → putar balik",
-   "n": 110,
-   "waktu_tempuh_rata_s": 524.2,
-   "waktu_tempuh_p85_s": 861.9,
-   "tundaan_rata_s": 442.2
-  },
-  "KAH_north": {
-   "label": "KAH_north",
-   "n": 32,
-   "waktu_tempuh_rata_s": 131.9,
-   "waktu_tempuh_p85_s": 146.4,
-   "tundaan_rata_s": 37.1
-  },
-  "KAH_south": {
-   "label": "KAH_south",
-   "n": 37,
-   "waktu_tempuh_rata_s": 86.6,
-   "waktu_tempuh_p85_s": 107.0,
-   "tundaan_rata_s": 22.1
-  },
-  "GER_north": {
-   "label": "Gerlong → atas",
-   "n": 317,
-   "waktu_tempuh_rata_s": 934.5,
-   "waktu_tempuh_p85_s": 1109.5,
-   "tundaan_rata_s": 838.4
+  "NB_thru": {
+   "label": "Dari bawah → lurus ke atas",
+   "n": 2364,
+   "waktu_tempuh_rata_s": 163.3,
+   "waktu_tempuh_p85_s": 210.2,
+   "tundaan_rata_s": 67.8
   },
   "GER_south": {
    "label": "Gerlong → bawah",
-   "n": 224,
-   "waktu_tempuh_rata_s": 919.8,
-   "waktu_tempuh_p85_s": 1135.3,
-   "tundaan_rata_s": 829.1
+   "n": 196,
+   "waktu_tempuh_rata_s": 195.6,
+   "waktu_tempuh_p85_s": 235.5,
+   "tundaan_rata_s": 84.1
   },
-  "NB_kah": {
-   "label": "NB_kah",
-   "n": 28,
-   "waktu_tempuh_rata_s": 521.2,
-   "waktu_tempuh_p85_s": 744.3,
-   "tundaan_rata_s": 463.8
+  "NB_uturn": {
+   "label": "Dari bawah → putar balik",
+   "n": 99,
+   "waktu_tempuh_rata_s": 183.9,
+   "waktu_tempuh_p85_s": 230.5,
+   "tundaan_rata_s": 90.3
+  },
+  "GER_north": {
+   "label": "Gerlong → atas",
+   "n": 276,
+   "waktu_tempuh_rata_s": 176.9,
+   "waktu_tempuh_p85_s": 225.5,
+   "tundaan_rata_s": 70.9
   },
   "SB_ger": {
    "label": "Dari atas (Lembang) → Gerlong",
-   "n": 243,
-   "waktu_tempuh_rata_s": 1617.1,
-   "waktu_tempuh_p85_s": 2293.1,
-   "tundaan_rata_s": 1557.1
+   "n": 221,
+   "waktu_tempuh_rata_s": 530.7,
+   "waktu_tempuh_p85_s": 846.8,
+   "tundaan_rata_s": 431.2
   },
   "SB_uturn": {
    "label": "Dari atas → putar balik",
-   "n": 75,
-   "waktu_tempuh_rata_s": 1621.4,
-   "waktu_tempuh_p85_s": 2369.0,
-   "tundaan_rata_s": 1563.5
+   "n": 73,
+   "waktu_tempuh_rata_s": 541.3,
+   "waktu_tempuh_p85_s": 901.9,
+   "tundaan_rata_s": 435.3
+  },
+  "SB_kah": {
+   "label": "SB_kah",
+   "n": 34,
+   "waktu_tempuh_rata_s": 177.9,
+   "waktu_tempuh_p85_s": 252.2,
+   "tundaan_rata_s": 84.3
+  },
+  "KAH_north": {
+   "label": "KAH_north",
+   "n": 16,
+   "waktu_tempuh_rata_s": 122.8,
+   "waktu_tempuh_p85_s": 144.9,
+   "tundaan_rata_s": 34.0
+  },
+  "NB_kah": {
+   "label": "NB_kah",
+   "n": 14,
+   "waktu_tempuh_rata_s": 127.2,
+   "waktu_tempuh_p85_s": 154.2,
+   "tundaan_rata_s": 62.4
   }
  },
- "tundaan_rata_semua_s": 645.7,
- "kendaraan_diukur": 6323,
- "belum_selesai": 699,
- "antrean_turun_rata_m": 614.5,
- "antrean_turun_maks_m": 681.0,
- "antrean_turun_p95_m": 679.8,
- "antrean_naik_rata_m": 239.4,
- "antrean_naik_maks_m": 406.8,
- "antrean_naik_p95_m": 383.1,
- "antrean_gerlong_rata_m": 362.8,
- "antrean_gerlong_maks_m": 433.3,
- "antrean_gerlong_p95_m": 432.4,
+ "tundaan_rata_semua_s": 100.3,
+ "kendaraan_diukur": 5706,
+ "belum_selesai": 397,
+ "antrean_turun_rata_m": 220.9,
+ "antrean_turun_maks_m": 451.9,
+ "antrean_turun_p95_m": 416.4,
+ "antrean_naik_rata_m": 75.6,
+ "antrean_naik_maks_m": 230.3,
+ "antrean_naik_p95_m": 179.3,
+ "antrean_gerlong_rata_m": 26.9,
+ "antrean_gerlong_maks_m": 101.3,
+ "antrean_gerlong_p95_m": 77.7,
  "teleport": 1,
  "seed": 1,
  "tag": "S0_seed1",
- "wall_s": 1715.5
+ "wall_s": 191.3
 }

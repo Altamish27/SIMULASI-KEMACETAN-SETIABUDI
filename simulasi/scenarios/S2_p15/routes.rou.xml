@@ -1,0 +1,82 @@
+<routes>
+
+  <!-- Motor: menyelip (sublane), agresif khas lalu lintas Bandung -->
+  <vType id="motor" vClass="motorcycle" length="1.95" width="0.75" height="1.4" minGap="0.8" maxSpeed="16.7"
+         accel="3.2" decel="6.0" emergencyDecel="9" sigma="0.6" tau="0.6" speedFactor="normc(1.05,0.15,0.6,1.5)"
+         latAlignment="arbitrary" minGapLat="0.25" maxSpeedLat="1.6" lcStrategic="2" lcCooperative="0.3"
+         lcSpeedGain="3" lcKeepRight="0" lcPushy="0.9" lcImpatience="0.9" lcAssertive="2.5"
+         jmDriveAfterRedTime="1.5" jmIgnoreKeepClearTime="8" impatience="0.9" color="0.95,0.4,0.1" guiShape="motorcycle"/>
+  <vType id="mobil" vClass="passenger" length="4.3" width="1.75" height="1.5" minGap="1.8" maxSpeed="22"
+         accel="2.4" decel="4.5" sigma="0.5" tau="1.0" speedFactor="normc(1,0.1,0.6,1.3)"
+         latAlignment="center" minGapLat="0.45" lcPushy="0.3" lcAssertive="1.3" lcImpatience="0.5"
+         impatience="0.6" color="0.85,0.85,0.88" guiShape="passenger"/>
+  <!-- Angkot hijau (Suzuki Carry): sering berhenti/ngetem — diatur oleh pengendali TraCI -->
+  <vType id="angkot" vClass="passenger" length="3.95" width="1.6" height="1.9" minGap="1.5" maxSpeed="16"
+         accel="1.8" decel="4.0" sigma="0.6" tau="0.9" lcPushy="0.6" lcAssertive="1.6" impatience="0.8"
+         color="0.1,0.6,0.3" guiShape="passenger/van"/>
+  <!-- Dump truck engkel bermuatan -->
+  <vType id="truk" vClass="truck" length="6.8" width="2.4" height="3.0" minGap="2.5" maxSpeed="15"
+         accel="0.9" decel="3.8" sigma="0.4" tau="1.3" lcAssertive="1" impatience="0.5" color="0.9,0.8,0.1" guiShape="truck"/>
+  <!-- Bus sedang (arah Lembang) -->
+  <vType id="bus" vClass="bus" length="9.5" width="2.5" height="3.2" minGap="2.5" maxSpeed="14"
+         accel="0.9" decel="3.5" sigma="0.3" tau="1.3" color="0.2,0.7,0.3" guiShape="bus"/>
+  <!-- Varian menanjak (±5%): akselerasi & kecepatan kendaraan berat turun -->
+  <vType id="truk_naik" vClass="truck" length="6.8" width="2.4" height="3.0" minGap="2.5" maxSpeed="9"
+         accel="0.5" decel="3.8" sigma="0.4" tau="1.3" impatience="0.5" color="0.9,0.8,0.1" guiShape="truck"/>
+  <vType id="bus_naik" vClass="bus" length="9.5" width="2.5" height="3.2" minGap="2.5" maxSpeed="10"
+         accel="0.6" decel="3.5" sigma="0.3" tau="1.3" impatience="0.5" color="0.2,0.7,0.3" guiShape="bus"/>
+
+  <route id="SB_thru" edges="SB_N_B SB_B_Fu SB_Fu_G SB_G_A SB_A_S"/>
+  <route id="SB_ger" edges="SB_N_B SB_B_Fu FO NB_Fd_A NB_A_G GER_out"/>
+  <route id="SB_uturn" edges="SB_N_B SB_B_Fu FO NB_Fd_A NB_A_G NB_G_B NB_B_N"/>
+  <route id="SB_kah" edges="SB_N_B SB_B_Fu SB_Fu_G SB_G_A KAH_out"/>
+  <route id="NB_thru" edges="NB_S_Fd NB_Fd_A NB_A_G NB_G_B NB_B_N"/>
+  <route id="NB_ger" edges="NB_S_Fd NB_Fd_A NB_A_G GER_out"/>
+  <route id="NB_uturn" edges="NB_S_Fd NB_Fd_A NB_A_G NB_G_B SB_B_Fu SB_Fu_G SB_G_A SB_A_S"/>
+  <route id="NB_kah" edges="NB_S_Fd NB_Fd_A NB_A_G NB_G_B SB_B_Fu SB_Fu_G SB_G_A KAH_out"/>
+  <route id="GER_north" edges="GER_in NB_G_B NB_B_N"/>
+  <route id="GER_south" edges="GER_in NB_G_B SB_B_Fu SB_Fu_G SB_G_A SB_A_S"/>
+  <route id="KAH_south" edges="KAH_in SB_A_S"/>
+  <route id="KAH_north" edges="KAH_in SB_A_S"/>
+  <flow id="SB_thru__motor" type="motor" route="SB_thru" begin="0" end="4200" period="exp(0.442258)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="SB_thru__mobil" type="mobil" route="SB_thru" begin="0" end="4200" period="exp(0.192596)" departLane="best" departSpeed="avg" />
+  <flow id="SB_thru__angkot" type="angkot" route="SB_thru" begin="0" end="4200" period="exp(0.035666)" departLane="best" departSpeed="avg" />
+  <flow id="SB_thru__truk" type="truk" route="SB_thru" begin="0" end="4200" period="exp(0.024966)" departLane="best" departSpeed="avg" />
+  <flow id="SB_thru__bus" type="bus" route="SB_thru" begin="0" end="4200" period="exp(0.017833)" departLane="best" departSpeed="avg" />
+  <flow id="SB_ger__motor" type="motor" route="SB_ger" begin="0" end="4200" period="exp(0.040697)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="SB_ger__mobil" type="mobil" route="SB_ger" begin="0" end="4200" period="exp(0.016905)" departLane="best" departSpeed="avg" />
+  <flow id="SB_ger__angkot" type="angkot" route="SB_ger" begin="0" end="4200" period="exp(0.003757)" departLane="best" departSpeed="avg" />
+  <flow id="SB_ger__truk" type="truk" route="SB_ger" begin="0" end="4200" period="exp(0.001252)" departLane="best" departSpeed="avg" />
+  <flow id="SB_uturn__motor" type="motor" route="SB_uturn" begin="0" end="4200" period="exp(0.012679)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="SB_uturn__mobil" type="mobil" route="SB_uturn" begin="0" end="4200" period="exp(0.005434)" departLane="best" departSpeed="avg" />
+  <flow id="SB_uturn__angkot" type="angkot" route="SB_uturn" begin="0" end="4200" period="exp(0.001006)" departLane="best" departSpeed="avg" />
+  <flow id="SB_uturn__truk" type="truk" route="SB_uturn" begin="0" end="4200" period="exp(0.000704)" departLane="best" departSpeed="avg" />
+  <flow id="SB_uturn__bus" type="bus" route="SB_uturn" begin="0" end="4200" period="exp(0.000302)" departLane="best" departSpeed="avg" />
+  <flow id="SB_kah__motor" type="motor" route="SB_kah" begin="0" end="4200" period="exp(0.007156)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="SB_kah__mobil" type="mobil" route="SB_kah" begin="0" end="4200" period="exp(0.001789)" departLane="best" departSpeed="avg" />
+  <flow id="NB_thru__motor" type="motor" route="NB_thru" begin="0" end="4200" period="exp(0.458895)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="NB_thru__mobil" type="mobil" route="NB_thru" begin="0" end="4200" period="exp(0.199841)" departLane="best" departSpeed="avg" />
+  <flow id="NB_thru__angkot" type="angkot" route="NB_thru" begin="0" end="4200" period="exp(0.037008)" departLane="best" departSpeed="avg" />
+  <flow id="NB_thru__truk" type="truk_naik" route="NB_thru" begin="0" end="4200" period="exp(0.028164)" departLane="best" departSpeed="avg" />
+  <flow id="NB_thru__bus" type="bus_naik" route="NB_thru" begin="0" end="4200" period="exp(0.018973)" departLane="best" departSpeed="avg" />
+  <flow id="NB_ger__motor" type="motor" route="NB_ger" begin="0" end="4200" period="exp(0.046511)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="NB_ger__mobil" type="mobil" route="NB_ger" begin="0" end="4200" period="exp(0.019320)" departLane="best" departSpeed="avg" />
+  <flow id="NB_ger__angkot" type="angkot" route="NB_ger" begin="0" end="4200" period="exp(0.004293)" departLane="best" departSpeed="avg" />
+  <flow id="NB_ger__truk" type="truk_naik" route="NB_ger" begin="0" end="4200" period="exp(0.001431)" departLane="best" departSpeed="avg" />
+  <flow id="NB_uturn__motor" type="motor" route="NB_uturn" begin="0" end="4200" period="exp(0.019722)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="NB_uturn__mobil" type="mobil" route="NB_uturn" begin="0" end="4200" period="exp(0.008452)" departLane="best" departSpeed="avg" />
+  <flow id="NB_uturn__angkot" type="angkot" route="NB_uturn" begin="0" end="4200" period="exp(0.001565)" departLane="best" departSpeed="avg" />
+  <flow id="NB_kah__motor" type="motor" route="NB_kah" begin="0" end="4200" period="exp(0.005367)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="NB_kah__mobil" type="mobil" route="NB_kah" begin="0" end="4200" period="exp(0.001342)" departLane="best" departSpeed="avg" />
+  <flow id="GER_north__motor" type="motor" route="GER_north" begin="0" end="4200" period="exp(0.050872)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="GER_north__mobil" type="mobil" route="GER_north" begin="0" end="4200" period="exp(0.021131)" departLane="best" departSpeed="avg" />
+  <flow id="GER_north__angkot" type="angkot" route="GER_north" begin="0" end="4200" period="exp(0.004696)" departLane="best" departSpeed="avg" />
+  <flow id="GER_north__truk" type="truk_naik" route="GER_north" begin="0" end="4200" period="exp(0.001565)" departLane="best" departSpeed="avg" />
+  <flow id="GER_south__motor" type="motor" route="GER_south" begin="0" end="4200" period="exp(0.037790)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="GER_south__mobil" type="mobil" route="GER_south" begin="0" end="4200" period="exp(0.015697)" departLane="best" departSpeed="avg" />
+  <flow id="GER_south__angkot" type="angkot" route="GER_south" begin="0" end="4200" period="exp(0.003488)" departLane="best" departSpeed="avg" />
+  <flow id="KAH_south__motor" type="motor" route="KAH_south" begin="0" end="4200" period="exp(0.007156)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="KAH_south__mobil" type="mobil" route="KAH_south" begin="0" end="4200" period="exp(0.001789)" departLane="best" departSpeed="avg" />
+  <flow id="KAH_north__motor" type="motor" route="KAH_north" begin="0" end="4200" period="exp(0.005367)" departLane="best" departSpeed="avg" departPosLat="random"/>
+  <flow id="KAH_north__mobil" type="mobil" route="KAH_north" begin="0" end="4200" period="exp(0.001342)" departLane="best" departSpeed="avg" />
+</routes>

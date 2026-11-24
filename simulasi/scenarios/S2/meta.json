@@ -1,6 +1,7 @@
 {
  "scenario": "S2",
  "scale": 1.0,
+ "kalibrasi": 0.7,
  "volumes": {
   "SB_total": 3600,
   "NB_total": 3800,
@@ -51,182 +52,182 @@
   [
    "SB_thru",
    "motor",
-   1977.8
+   1384.5
   ],
   [
    "SB_thru",
    "mobil",
-   861.3
+   602.9
   ],
   [
    "SB_thru",
    "angkot",
-   159.5
+   111.6
   ],
   [
    "SB_thru",
    "truk",
-   111.7
+   78.2
   ],
   [
    "SB_thru",
    "bus",
-   79.8
+   55.8
   ],
   [
    "SB_ger",
    "motor",
-   182.0
+   127.4
   ],
   [
    "SB_ger",
    "mobil",
-   75.6
+   52.9
   ],
   [
    "SB_ger",
    "angkot",
-   16.8
+   11.8
   ],
   [
    "SB_ger",
    "truk",
+   3.9
+  ],
+  [
+   "SB_ger",
+   "bus",
+   0.0
+  ],
+  [
+   "SB_uturn",
+   "motor",
+   39.7
+  ],
+  [
+   "SB_uturn",
+   "mobil",
+   17.0
+  ],
+  [
+   "SB_uturn",
+   "angkot",
+   3.1
+  ],
+  [
+   "SB_uturn",
+   "truk",
+   2.2
+  ],
+  [
+   "SB_uturn",
+   "bus",
+   0.9
+  ],
+  [
+   "SB_kah",
+   "motor",
+   22.4
+  ],
+  [
+   "SB_kah",
+   "mobil",
    5.6
   ],
   [
-   "SB_ger",
-   "bus",
-   0.0
-  ],
-  [
-   "SB_uturn",
-   "motor",
-   56.7
-  ],
-  [
-   "SB_uturn",
-   "mobil",
-   24.3
-  ],
-  [
-   "SB_uturn",
-   "angkot",
-   4.5
-  ],
-  [
-   "SB_uturn",
-   "truk",
-   3.2
-  ],
-  [
-   "SB_uturn",
-   "bus",
-   1.3
-  ],
-  [
-   "SB_kah",
-   "motor",
-   32.0
-  ],
-  [
-   "SB_kah",
-   "mobil",
-   8.0
-  ],
-  [
    "NB_thru",
    "motor",
-   2052.2
+   1436.5
   ],
   [
    "NB_thru",
    "mobil",
-   893.7
+   625.6
   ],
   [
    "NB_thru",
    "angkot",
-   165.5
+   115.8
   ],
   [
    "NB_thru",
    "truk",
-   126.0
-  ],
-  [
-   "NB_thru",
-   "bus",
-   84.8
-  ],
-  [
-   "NB_ger",
-   "motor",
-   208.0
-  ],
-  [
-   "NB_ger",
-   "mobil",
-   86.4
-  ],
-  [
-   "NB_ger",
-   "angkot",
-   19.2
-  ],
-  [
-   "NB_ger",
-   "truk",
-   6.4
-  ],
-  [
-   "NB_ger",
-   "bus",
-   0.0
-  ],
-  [
-   "NB_uturn",
-   "motor",
    88.2
   ],
   [
+   "NB_thru",
+   "bus",
+   59.4
+  ],
+  [
+   "NB_ger",
+   "motor",
+   145.6
+  ],
+  [
+   "NB_ger",
+   "mobil",
+   60.5
+  ],
+  [
+   "NB_ger",
+   "angkot",
+   13.4
+  ],
+  [
+   "NB_ger",
+   "truk",
+   4.5
+  ],
+  [
+   "NB_ger",
+   "bus",
+   0.0
+  ],
+  [
+   "NB_uturn",
+   "motor",
+   61.7
+  ],
+  [
    "NB_uturn",
    "mobil",
-   37.8
+   26.5
   ],
   [
    "NB_uturn",
    "angkot",
-   7.0
+   4.9
   ],
   [
    "NB_kah",
    "motor",
-   24.0
+   16.8
   ],
   [
    "NB_kah",
    "mobil",
-   6.0
+   4.2
   ],
   [
    "GER_north",
    "motor",
-   227.5
+   159.2
   ],
   [
    "GER_north",
    "mobil",
-   94.5
+   66.1
   ],
   [
    "GER_north",
    "angkot",
-   21.0
+   14.7
   ],
   [
    "GER_north",
    "truk",
-   7.0
+   4.9
   ],
   [
    "GER_north",
@@ -236,37 +237,37 @@
   [
    "GER_south",
    "motor",
-   169.0
+   118.3
   ],
   [
    "GER_south",
    "mobil",
-   70.2
+   49.1
   ],
   [
    "GER_south",
    "angkot",
-   15.6
+   10.9
   ],
   [
    "KAH_south",
    "motor",
-   32.0
+   22.4
   ],
   [
    "KAH_south",
    "mobil",
-   8.0
+   5.6
   ],
   [
    "KAH_north",
    "motor",
-   24.0
+   16.8
   ],
   [
    "KAH_north",
    "mobil",
-   6.0
+   4.2
   ]
  ]
 }
